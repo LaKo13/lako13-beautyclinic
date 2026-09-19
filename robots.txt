@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://beautyclinicmallorca.com/sitemap.xml
