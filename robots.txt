@@ -1,0 +1,8 @@
+# Beauty Clinic Mallorca — robots.txt (draft)
+# Deploy to repo root (GitHub Pages): /robots.txt → https://beautyclinicmallorca.com/robots.txt
+# Prefer non-www canonical (www currently 301s to apex).
+
+User-agent: *
+Allow: /
+
+Sitemap: https://beautyclinicmallorca.com/sitemap.xml
