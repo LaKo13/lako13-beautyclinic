@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Draft sitemap. Live EN+DE URLs confirmed 200 on 2026-09-29.
+     Apex host (beautyclinicmallorca.com); www redirects to apex. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://beautyclinicmallorca.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beautyclinicmallorca.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beautyclinicmallorca.com/index-de.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://beautyclinicmallorca.com/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://beautyclinicmallorca.com/index-de.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beautyclinicmallorca.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beautyclinicmallorca.com/index-de.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://beautyclinicmallorca.com/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>

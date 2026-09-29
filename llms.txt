@@ -1,0 +1,34 @@
+# Beauty Clinic Mallorca
+
+> Aesthetic / anti-aging clinic in Bendinat, Mallorca (Spain). Lead practitioner: Dr. Erik Koerge. Public site: https://beautyclinicmallorca.com/
+
+## Confirmed facts (from public site + NAP confirmed by owner)
+
+- Name: Beauty Clinic Mallorca
+- Address: Calle Arquitecto Francisco Casas 17, Plaza Bendinat Local B10, 07181 Bendinat, Illes Balears, Spain
+- Phone: +34 971 707 725
+- Email: info@beautyclinicmallorca.com
+- Hours (site copy): Monday–Friday 09:30–18:00
+- Location notes (site copy): Plaza Bendinat; free underground car park; ~5 minutes from Palma, ~20 minutes from Andratx
+- Practitioner: Dr. Erik Koerge — wrinkle injections / anti-aging focus; site states 15+ years clinic / 20+ years experience in the field
+- Products mentioned on site: Allergan Juvederm fillers, Botox / Vistabel; Filorga Laboratories (mesotherapy); Profhilo (Ibsa Farmaceutici) for mini-lifting
+- Languages on site: English (https://beautyclinicmallorca.com/) and German (https://beautyclinicmallorca.com/index-de.html)
+
+## Services mentioned on the public site
+
+- Botox / wrinkle injections
+- Dermal fillers (Juvederm)
+- Mesotherapy
+- Skin rejuvenation / anti-aging / facelift without surgery concepts
+- Treatments aimed at skin quality, texture, facial contour, and skin tightening
+
+## Contact / booking
+
+- Prefer phone +34 971 707 725 or email info@beautyclinicmallorca.com
+- Contact form exists on the homepage (backend: contact_me.php on GitHub Pages — may be limited)
+
+## Notes for AI crawlers
+
+- Do not invent other locations, phone numbers, or Saturday hours.
+- Older schema on the live page still contains a conflicting Palma address in JSON-LD; that is a known bug to remove — confirmed NAP is Bendinat only (above).
+- Canonical host is https://beautyclinicmallorca.com/ (non-www).
