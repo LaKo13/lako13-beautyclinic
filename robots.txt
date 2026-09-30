@@ -1,8 +1,33 @@
-# Beauty Clinic Mallorca — robots.txt (draft)
+# Beauty Clinic Mallorca — robots.txt
 # Deploy to repo root (GitHub Pages): /robots.txt → https://beautyclinicmallorca.com/robots.txt
 # Prefer non-www canonical (www currently 301s to apex).
 
 User-agent: *
+Allow: /
+
+# Explicitly allow AI crawlers for discoverability
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://beautyclinicmallorca.com/sitemap.xml
