@@ -12,6 +12,26 @@
           })
         </script>
 
+        <!-- Contact Click Tracking -->
+        <script>
+          document.addEventListener('click', function(e) {
+            var target = e.target.closest('a[href]');
+            if (!target) return;
+            var href = target.getAttribute('href');
+            var type = null;
+            if (href.startsWith('tel:')) type = 'phone';
+            else if (href.startsWith('mailto:')) type = 'email';
+            else if (href.includes('wa.me') || href.includes('whatsapp')) type = 'whatsapp';
+            else if (href.includes('google.com/maps') || href.includes('goo.gl/maps')) type = 'directions';
+            if (type) {
+              var section = target.closest('[id]');
+              var location = section ? section.id : 'unknown';
+              var lang = document.documentElement.lang || 'unknown';
+              posthog.capture('contact_click', { type: type, location: location, lang: lang });
+            }
+          });
+        </script>
+
         <title>Privacy Policy – Beauty Clinic Mallorca</title>
         <meta name="description" content="Privacy policy of Beauty Clinic Mallorca in Bendinat, Mallorca: what personal data is processed on this website, legal bases and your rights under the GDPR.">
         <meta charset="utf-8">
