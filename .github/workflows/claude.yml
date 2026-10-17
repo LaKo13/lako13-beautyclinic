@@ -2,6 +2,7 @@ name: Claude Code
 
 # @claude on issues/PRs -> Claude Code run billed to Laurent's Claude subscription
 # (CLAUDE_CODE_OAUTH_TOKEN from `claude setup-token`). Only LaKo13 can trigger it.
+# Model: sonnet by default; add [opus] or [haiku] to the request to switch.
 
 on:
   issue_comment:
@@ -42,6 +43,32 @@ jobs:
         with:
           fetch-depth: 0   # full history so Claude can rebase PR branches onto main
 
+      # Model per request: default sonnet; "[opus]" or "[haiku]" in the triggering
+      # comment / review / issue picks that model ([opus] wins if both appear).
+      # Text is passed via env, never interpolated into the script.
+      - name: Pick model
+        id: model
+        env:
+          EVENT: ${{ github.event_name }}
+          COMMENT_BODY: ${{ github.event.comment.body }}
+          REVIEW_BODY: ${{ github.event.review.body }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: |
+          case "$EVENT" in
+            issue_comment|pull_request_review_comment) text="$COMMENT_BODY" ;;
+            pull_request_review) text="$REVIEW_BODY" ;;
+            issues) text="$ISSUE_TITLE $ISSUE_BODY" ;;
+            *) text="" ;;
+          esac
+          model=sonnet
+          case "$text" in
+            *"[opus]"*) model=opus ;;
+            *"[haiku]"*) model=haiku ;;
+          esac
+          echo "model=$model" >> "$GITHUB_OUTPUT"
+          echo "Selected model: $model"
+
       - name: Run Claude Code
         id: claude
         uses: anthropics/claude-code-action@v1
@@ -51,4 +78,5 @@ jobs:
           # Only pass LaKo13's (and Claude's own) comments into Claude's context.
           include_comments_by_actor: "LaKo13,claude[bot]"
           claude_args: |
+            --model ${{ steps.model.outputs.model }}
             --max-turns 60
