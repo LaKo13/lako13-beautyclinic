@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- PostHog Analytics -->
+        <script>
+          !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+          posthog.init('phc_tHp7NezNwFJNqLXUGS9Qji3jzG8SHZQjVb4GDDnJrR3W', {
+            api_host: 'https://eu.i.posthog.com',
+            person_profiles: 'identified_only',
+            disable_session_recording: true,
+            persistence: 'memory'
+          })
+        </script>
+
+        <!-- Contact Click Tracking -->
+        <script>
+          document.addEventListener('click', function(e) {
+            var target = e.target.closest('a[href]');
+            if (!target) return;
+            var href = target.getAttribute('href');
+            var type = null;
+            if (href.startsWith('tel:')) type = 'phone';
+            else if (href.startsWith('mailto:')) type = 'email';
+            else if (href.includes('wa.me') || href.includes('whatsapp')) type = 'whatsapp';
+            else if (href.includes('google.com/maps') || href.includes('goo.gl/maps')) type = 'directions';
+            if (type) {
+              var section = target.closest('[id]');
+              var location = section ? section.id : 'unknown';
+              var lang = document.documentElement.lang || 'unknown';
+              posthog.capture('contact_click', { type: type, location: location, lang: lang });
+            }
+          });
+        </script>
+
+        <title>Arrugas de expresión en Palma | Beauty Clinic Mallorca</title>
+        <meta name="description" content="Información sobre el tratamiento médico de las arrugas de expresión (frente, entrecejo, patas de gallo) en Plaza Bendinat, con valoración previa del Dr. Erik Koerge.">
+        <meta charset="utf-8">
+        <meta name="author" content="Beauty Clinic Mallorca">
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+        <!-- Canonical & hreflang -->
+        <link rel="canonical" href="https://beautyclinicmallorca.com/arrugas-expresion-palma.html">
+        <link rel="alternate" hreflang="es" href="https://beautyclinicmallorca.com/arrugas-expresion-palma.html">
+        <link rel="alternate" hreflang="x-default" href="https://beautyclinicmallorca.com/arrugas-expresion-palma.html">
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Beauty Clinic Mallorca">
+        <meta property="og:title" content="Arrugas de expresión en Palma | Beauty Clinic Mallorca">
+        <meta property="og:description" content="Tratamiento médico de las arrugas de expresión en Bendinat, Palma de Mallorca.">
+        <meta property="og:url" content="https://beautyclinicmallorca.com/arrugas-expresion-palma.html">
+        <meta property="og:locale" content="es_ES">
+        <meta property="og:image" content="https://beautyclinicmallorca.com/images/clinic/treatment-with-botox.jpg">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Arrugas de expresión en Palma">
+        <meta name="twitter:description" content="Tratamiento médico de arrugas de expresión. Bendinat, Mallorca.">
+        <meta name="twitter:image" content="https://beautyclinicmallorca.com/images/clinic/treatment-with-botox.jpg">
+
+        <!-- JSON-LD Schema -->
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Tratamiento de arrugas de expresión en Bendinat",
+  "description": "Información sobre el tratamiento médico de las arrugas de expresión (frente, entrecejo, patas de gallo) en Beauty Clinic Mallorca, Bendinat.",
+  "url": "https://beautyclinicmallorca.com/arrugas-expresion-palma.html",
+  "inLanguage": "es",
+  "about": {
+    "@type": "MedicalCondition",
+    "name": "Arrugas de expresión"
+  },
+  "publisher": {
+    "@id": "https://beautyclinicmallorca.com/#clinic"
+  }
+}
+        </script>
+
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalProcedure",
+  "name": "Tratamiento médico de arrugas de expresión"
+}
+        </script>
+
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto dura el efecto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El efecto suele durar entre 3 y 6 meses, variando según la persona y la zona tratada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuándo se ve el resultado completo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El resultado completo es visible en un plazo de 7 a 14 días."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué cuidados debo seguir después?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No se debe frotar la zona durante 24 horas y se debe evitar el ejercicio intenso, acostarse completamente o agacharse durante 4 horas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué efectos secundarios puede tener?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los efectos secundarios más comunes son hematomas temporales, hinchazón o molestias leves. En raras ocasiones pueden producirse dolor de cabeza, síntomas similares a la gripe o caída temporal del párpado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hay contraindicaciones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Puede no ser recomendable durante el embarazo, la lactancia o en personas con ciertas afecciones neurológicas. La valoración se realiza en la consulta médica."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo pedir una consulta si estoy de vacaciones en Mallorca?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, atendemos tanto a residentes como a visitantes. Horario: lunes a viernes de 09:30 a 16:00."
+      }
+    }
+  ]
+}
+        </script>
+
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://beautyclinicmallorca.com/index-es.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Arrugas de expresión",
+      "item": "https://beautyclinicmallorca.com/arrugas-expresion-palma.html"
+    }
+  ]
+}
+        </script>
+
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="images/favicon.png">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style-responsive.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/vertical-rhythm.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    </head>
+    <body class="appear-animate">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="loader">Cargando...</div>
+        </div>
+        <!-- End Page Loader -->
+
+        <!-- Page Wrap -->
+        <div class="page" id="top">
+
+        <!-- Title Section -->
+        <section class="page-section bg-dark-alfa-30 bg-scroll" data-background="images/clinic/treatment-with-botox.jpg" id="home">
+            <div class="relative container align-left">
+                <h1 class="hs-line-11 font-alt mb-0 mt-xs-20">
+                    Tratamiento de arrugas de expresión en Bendinat (Palma de Mallorca)
+                </h1>
+            </div>
+        </section>
+        <!-- End Title Section -->
+
+
+        <!-- Navigation panel -->
+        <nav class="main-nav dark transparent stick-fixed">
+            <div class="full-wrapper relative clearfix">
+                <!-- Logo -->
+                <div class="nav-logo-wrap local-scroll">
+                    <a href="index-es.html" class="logo" title="Beauty Clinic Mallorca">
+                        <img src="images/clinic/dentaface-logo-white1.png" alt="Beauty Clinic Mallorca Logo" />
+                    </a>
+                </div>
+                <div class="mobile-nav">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <!-- Main Menu -->
+                <div class="inner-nav desktop-nav">
+                    <ul class="clearlist scroll-nav local-scroll">
+                        <li><a href="index-es.html#home">Inicio</a></li>
+                        <li><a href="index-es.html#about">Sobre nosotros</a></li>
+                        <li><a href="index-es.html#services">Tratamientos</a></li>
+                        <li><a href="index-es.html#contact">Contacto</a></li>
+                        <li><a href="index.html"><img src="images/uk-flag.png" alt="Switch to English" width="20" height="20"/></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navigation panel -->
+
+
+        <!-- Content Section -->
+        <section class="page-section" id="content">
+            <div class="container relative">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="text">
+
+                            <h2 class="font-alt mb-30">¿Qué son las arrugas de expresión?</h2>
+                            <p>Las arrugas de expresión son líneas dinámicas que aparecen debido a la actividad de los músculos faciales. Son frecuentes en la frente, entre las cejas (entrecejo) y alrededor de los ojos (patas de gallo). Un tratamiento médico específico puede ayudar a reducir su apariencia de forma temporal.</p>
+
+                            <h2 class="font-alt mb-30 mt-40">Zonas que se valoran en consulta</h2>
+                            <p>Las áreas más comunes son la frente, el entrecejo y las patas de gallo. Durante la consulta, el Dr. Koerge evalúa qué zonas pueden beneficiarse del tratamiento según sus características y objetivos individuales.</p>
+
+                            <h2 class="font-alt mb-30 mt-40">¿Quién puede tratarse? Valoración médica previa</h2>
+                            <p>El tratamiento es para adultos a partir de 18 años que desean reducir la apariencia de arrugas de expresión. Es especialmente efectivo para líneas en la frente, patas de gallo y arrugas del entrecejo. Durante su consulta en Beauty Clinic Mallorca, el Dr. Koerge evaluará su historial médico y discutirá sus objetivos para determinar si este tratamiento es apropiado para usted. Puede no ser recomendable para mujeres embarazadas o en lactancia, o personas con ciertas afecciones neurológicas.</p>
+
+                            <h2 class="font-alt mb-30 mt-40">Cómo es la consulta con el Dr. Koerge</h2>
+                            <p>En la consulta, el Dr. Koerge revisará su historial médico, evaluará las áreas de interés y explicará el procedimiento, los cuidados posteriores y los posibles efectos secundarios. La idoneidad del tratamiento se decide en esta valoración médica personalizada.</p>
+
+                            <h2 class="font-alt mb-30 mt-40">Duración orientativa del efecto</h2>
+                            <p>El efecto suele durar entre 3 y 6 meses, variando según la persona y la zona tratada. A medida que el efecto desaparece gradualmente, la actividad muscular vuelve y las arrugas pueden reaparecer. Los tratamientos de mantenimiento regulares pueden ayudar a mantener la apariencia deseada. El Dr. Koerge recomendará un programa de tratamiento apropiado durante sus citas de seguimiento.</p>
+
+                            <h2 class="font-alt mb-30 mt-40">Cuidados después del tratamiento</h2>
+                            <p>Después del tratamiento, evite frotar o masajear las áreas tratadas durante al menos 24 horas para evitar que el producto se extienda a músculos no deseados. Evite el ejercicio intenso, acostarse completamente o agacharse durante 4 horas después del tratamiento. Puede experimentar enrojecimiento leve, hinchazón o hematomas en los puntos de inyección, que generalmente se resuelven en unas horas o días. La mayoría de los pacientes pueden volver a las actividades normales de inmediato. Los resultados completos son visibles en un plazo de 7 a 14 días.</p>
+
+                            <h2 class="font-alt mb-30 mt-40">Posibles efectos secundarios y contraindicaciones</h2>
+                            <p>Los efectos secundarios más comunes incluyen hematomas temporales, hinchazón o molestias leves en los puntos de inyección. Las complicaciones raras pueden incluir dolor de cabeza, síntomas similares a la gripe o caída temporal del párpado. El Dr. Koerge discutirá todos los riesgos potenciales durante su consulta y se asegurará de que reciba un tratamiento apropiado adaptado a sus necesidades individuales.</p>
+
+                            <h2 class="font-alt mb-30 mt-40">Presupuesto</h2>
+                            <p>El presupuesto se facilita de forma personalizada tras la valoración médica.</p>
+
+                            <h3 class="font-alt mb-20 mt-40">Preguntas frecuentes</h3>
+
+                            <div class="faq-item mb-30">
+                                <h4 class="font-alt mb-10">¿Cuánto dura el efecto?</h4>
+                                <p>El efecto suele durar entre 3 y 6 meses, variando según la persona y la zona tratada.</p>
+                            </div>
+
+                            <div class="faq-item mb-30">
+                                <h4 class="font-alt mb-10">¿Cuándo se ve el resultado completo?</h4>
+                                <p>El resultado completo es visible en un plazo de 7 a 14 días.</p>
+                            </div>
+
+                            <div class="faq-item mb-30">
+                                <h4 class="font-alt mb-10">¿Qué cuidados debo seguir después?</h4>
+                                <p>No se debe frotar la zona durante 24 horas y se debe evitar el ejercicio intenso, acostarse completamente o agacharse durante 4 horas.</p>
+                            </div>
+
+                            <div class="faq-item mb-30">
+                                <h4 class="font-alt mb-10">¿Qué efectos secundarios puede tener?</h4>
+                                <p>Los efectos secundarios más comunes son hematomas temporales, hinchazón o molestias leves. En raras ocasiones pueden producirse dolor de cabeza, síntomas similares a la gripe o caída temporal del párpado.</p>
+                            </div>
+
+                            <div class="faq-item mb-30">
+                                <h4 class="font-alt mb-10">¿Hay contraindicaciones?</h4>
+                                <p>Puede no ser recomendable durante el embarazo, la lactancia o en personas con ciertas afecciones neurológicas. La valoración se realiza en la consulta médica.</p>
+                            </div>
+
+                            <div class="faq-item mb-30">
+                                <h4 class="font-alt mb-10">¿Puedo pedir una consulta si estoy de vacaciones en Mallorca?</h4>
+                                <p>Sí, atendemos tanto a residentes como a visitantes. Horario: lunes a viernes de 09:30 a 16:00. Contacte con nosotros para <a href="#contact">reservar su consulta</a>.</p>
+                            </div>
+
+                            <h2 class="font-alt mb-30 mt-40" id="contact">Dónde estamos</h2>
+                            <p><strong>Beauty Clinic Mallorca</strong><br>
+                            Calle Arquitecto Francisco Casas 17, Plaza Bendinat Local B10<br>
+                            07181 Bendinat, Mallorca<br>
+                            Teléfono: <a href="tel:+34971707725">+34 971 707 725</a><br>
+                            Email: <a href="mailto:info@beautyclinicmallorca.com">info@beautyclinicmallorca.com</a><br>
+                            <strong>Horario:</strong> Lunes–viernes 09:30–16:00</p>
+
+                            <p>Parking subterráneo gratuito en Plaza Bendinat. A 5 minutos en coche de Palma, unos 20 minutos de Andratx.</p>
+
+                            <p><a href="https://www.google.com/maps?cid=2149816206636862685" target="_blank" rel="noopener">Cómo llegar en Google Maps</a></p>
+
+                            <p class="mt-40"><em>La información de esta página es orientativa y no sustituye a la valoración médica individual.</em></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Content Section -->
+
+
+            <!-- Footer -->
+            <footer class="page-section bg-gray-lighter footer pb-60">
+                <div class="container">
+                    <!-- Footer Logo -->
+                    <div class="local-scroll mb-30 wow fadeInUp" data-wow-duration="1.2s">
+                        <a href="#top"><img src="images/clinic/dentaface-logo-black.png" width="180" height="36" alt="" /></a>
+                    </div>
+                    <!-- End Footer Logo -->
+            
+                    <!-- Footer Text -->
+                    <div class="footer-text">
+                        <!-- Copyright -->
+                        <div class="footer-copy font-alt">
+                            <a>&copy; Beauty Clinic Mallorca <span id="currentYear"></span>. Todos los derechos reservados.</a>
+                        </div>
+                        <!-- End Copyright -->
+                        <div class="footer-made">
+                            <a href="privacy.html">Privacidad</a>
+                        </div>
+                    </div>
+                    <!-- End Footer Text -->
+                </div>
+            
+                <!-- Top Link -->
+                <div class="local-scroll">
+                    <a href="#top" class="link-to-top"><i class="fa fa-caret-up"></i></a>
+                </div>
+                <!-- End Top Link -->
+            </footer>
+            
+            <script>
+                document.getElementById("currentYear").textContent = new Date().getFullYear();
+            </script>
+            
+            <!-- End Footer -->
+
+
+        </div>
+        <!-- End Page Wrap -->
+
+
+        <!-- JS -->
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/SmoothScroll.js"></script>
+        <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+        <script type="text/javascript" src="js/jquery.localScroll.min.js"></script>
+        <script type="text/javascript" src="js/jquery.viewport.mini.js"></script>
+        <script type="text/javascript" src="js/jquery.countTo.js"></script>
+        <script type="text/javascript" src="js/jquery.appear.js"></script>
+        <script type="text/javascript" src="js/jquery.sticky.js"></script>
+        <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+        <script type="text/javascript" src="js/jquery.fitvids.js"></script>
+        <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript" src="js/wow.min.js"></script>
+        <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/jquery.simple-text-rotator.min.js"></script>
+        <script type="text/javascript" src="js/all.js"></script>
+        <!--[if lt IE 10]><script type="text/javascript" src="js/placeholder.js"></script><![endif]-->
+
+    </body>
+</html>

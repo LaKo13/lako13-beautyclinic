@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- PostHog Analytics -->
+        <script>
+          !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+          posthog.init('phc_tHp7NezNwFJNqLXUGS9Qji3jzG8SHZQjVb4GDDnJrR3W', {
+            api_host: 'https://eu.i.posthog.com',
+            person_profiles: 'identified_only',
+            disable_session_recording: true,
+            persistence: 'memory'
+          })
+        </script>
+
+        <!-- Contact Click Tracking -->
+        <script>
+          document.addEventListener('click', function(e) {
+            var target = e.target.closest('a[href]');
+            if (!target) return;
+            var href = target.getAttribute('href');
+            var type = null;
+            if (href.startsWith('tel:')) type = 'phone';
+            else if (href.startsWith('mailto:')) type = 'email';
+            else if (href.includes('wa.me') || href.includes('whatsapp')) type = 'whatsapp';
+            else if (href.includes('google.com/maps') || href.includes('goo.gl/maps')) type = 'directions';
+            if (type) {
+              var section = target.closest('[id]');
+              var location = section ? section.id : 'unknown';
+              var lang = document.documentElement.lang || 'unknown';
+              posthog.capture('contact_click', { type: type, location: location, lang: lang });
+            }
+          });
+        </script>
+
+        <title>Skin Biorevitalization in Mallorca | Beauty Clinic Mallorca</title>
+        <meta name="description" content="Hyaluronic-acid skin biorevitalization for hydration and skin quality, with a personal consultation with Dr. Erik Koerge. Bendinat, 5 min from Palma. Mon–Fri 09:30–16:00.">
+        <meta charset="utf-8">
+        <meta name="author" content="Beauty Clinic Mallorca">
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+        <!-- Canonical & hreflang -->
+        <link rel="canonical" href="https://beautyclinicmallorca.com/biorevitalization-mallorca.html">
+        <link rel="alternate" hreflang="en" href="https://beautyclinicmallorca.com/biorevitalization-mallorca.html">
+        <link rel="alternate" hreflang="x-default" href="https://beautyclinicmallorca.com/biorevitalization-mallorca.html">
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Beauty Clinic Mallorca">
+        <meta property="og:title" content="Skin Biorevitalization in Mallorca | Beauty Clinic Mallorca">
+        <meta property="og:description" content="Hyaluronic-acid skin biorevitalization for hydration and skin quality. Bendinat, Mallorca.">
+        <meta property="og:url" content="https://beautyclinicmallorca.com/biorevitalization-mallorca.html">
+        <meta property="og:locale" content="en_GB">
+        <meta property="og:image" content="https://beautyclinicmallorca.com/images/clinic/Biorevitalization.jpg">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Skin Biorevitalization in Mallorca">
+        <meta name="twitter:description" content="Hyaluronic-acid skin biorevitalization. Bendinat, Mallorca.">
+        <meta name="twitter:image" content="https://beautyclinicmallorca.com/images/clinic/Biorevitalization.jpg">
+
+        <!-- JSON-LD Schema -->
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Skin Biorevitalization in Mallorca",
+  "description": "Hyaluronic-acid skin biorevitalization for hydration and skin quality at Beauty Clinic Mallorca in Bendinat.",
+  "url": "https://beautyclinicmallorca.com/biorevitalization-mallorca.html",
+  "inLanguage": "en",
+  "about": {
+    "@type": "MedicalProcedure",
+    "name": "Hyaluronic-acid skin biorevitalization"
+  },
+  "publisher": {
+    "@id": "https://beautyclinicmallorca.com/#clinic"
+  }
+}
+        </script>
+
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Biorevitalization or filler: what's the difference?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Biorevitalization uses hyaluronic acid to hydrate the skin and improve its quality and suppleness, while dermal fillers restore volume, fill wrinkles, and enhance contours such as lips and cheeks. Both treatments use hyaluronic acid but serve different purposes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I book while on holiday in Mallorca?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we welcome holiday visitors to Beauty Clinic Mallorca. We are open Monday to Friday from 09:30 to 16:00. Please contact us to book your consultation."
+      }
+    }
+  ]
+}
+        </script>
+
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://beautyclinicmallorca.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Skin Biorevitalization",
+      "item": "https://beautyclinicmallorca.com/biorevitalization-mallorca.html"
+    }
+  ]
+}
+        </script>
+
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="images/favicon.png">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style-responsive.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/vertical-rhythm.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    </head>
+    <body class="appear-animate">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="loader">Loading...</div>
+        </div>
+        <!-- End Page Loader -->
+
+        <!-- Page Wrap -->
+        <div class="page" id="top">
+
+        <!-- Title Section -->
+        <section class="page-section bg-dark-alfa-30 bg-scroll" data-background="images/clinic/Biorevitalization.jpg" id="home">
+            <div class="relative container align-left">
+                <h1 class="hs-line-11 font-alt mb-0 mt-xs-20">
+                    Skin biorevitalization in Mallorca
+                </h1>
+            </div>
+        </section>
+        <!-- End Title Section -->
+
+
+        <!-- Navigation panel -->
+        <nav class="main-nav dark transparent stick-fixed">
+            <div class="full-wrapper relative clearfix">
+                <!-- Logo -->
+                <div class="nav-logo-wrap local-scroll">
+                    <a href="index.html" class="logo" title="Beauty Clinic Mallorca">
+                        <img src="images/clinic/dentaface-logo-white1.png" alt="Beauty Clinic Mallorca Logo" />
+                    </a>
+                </div>
+                <div class="mobile-nav">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <!-- Main Menu -->
+                <div class="inner-nav desktop-nav">
+                    <ul class="clearlist scroll-nav local-scroll">
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="index-de.html"><img src="images/german-flag.png" alt="Auf Deutsch" width="20" height="20"/></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navigation panel -->
+
+
+        <!-- Content Section -->
+        <section class="page-section" id="content">
+            <div class="container relative">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="text">
+
+                            <h2 class="font-alt mb-30">What skin biorevitalization is</h2>
+                            <p>Biorevitalization uses hyaluronic-acid-based solutions to hydrate the skin, improve luminosity, and support collagen synthesis. It gives subtle improvements by restoring the skin's own hydration and may help delay visible signs of ageing. The treatment focuses on improving skin quality and suppleness on the face, neck, and décolleté.</p>
+
+                            <h2 class="font-alt mb-30 mt-40">Biorevitalization vs. dermal fillers</h2>
+                            <p>Biorevitalization aims to improve hydration and skin quality, while dermal fillers restore volume, fill wrinkles, and enhance contours such as lips and cheeks. Both treatments use hyaluronic acid but serve different purposes. If you are considering fillers as well, Dr. Koerge can discuss this during your <a href="index.html#services">consultation</a>.</p>
+
+                            <h2 class="font-alt mb-30 mt-40">Who it may suit</h2>
+                            <p>Biorevitalization may be suitable for adults seeking to improve skin hydration and quality. Suitability is decided at a personal consultation with Dr. Koerge, where your skin condition, medical history, and aesthetic goals are assessed.</p>
+
+                            <h2 class="font-alt mb-30 mt-40">Combining it with mesotherapy</h2>
+                            <p>Whether biorevitalization can be combined with mesotherapy can be discussed at your consultation with Dr. Koerge.</p>
+
+                            <h2 class="font-alt mb-30 mt-40">What to expect after treatment</h2>
+                            <p>Dr. Koerge explains aftercare at your consultation.</p>
+
+                            <h2 class="font-alt mb-30 mt-40">Philosophy: Refreshed, not altered</h2>
+                            <p>At Beauty Clinic Mallorca, our philosophy is to give you a refreshed appearance, not an altered one. Dr. Koerge has over 20 years of experience in aesthetic treatments and takes a natural, personalised approach to each patient.</p>
+
+                            <h3 class="font-alt mb-20 mt-40">Frequently Asked Questions</h3>
+
+                            <div class="faq-item mb-30">
+                                <h4 class="font-alt mb-10">Biorevitalization or filler: what's the difference?</h4>
+                                <p>Biorevitalization uses hyaluronic acid to hydrate the skin and improve its quality and suppleness, while dermal fillers restore volume, fill wrinkles, and enhance contours such as lips and cheeks. Both treatments use hyaluronic acid but serve different purposes.</p>
+                            </div>
+
+                            <div class="faq-item mb-30">
+                                <h4 class="font-alt mb-10">Can I book while on holiday in Mallorca?</h4>
+                                <p>Yes, we welcome holiday visitors to Beauty Clinic Mallorca. We are open Monday to Friday from 09:30 to 16:00. Please contact us to book your <a href="#contact">consultation</a>.</p>
+                            </div>
+
+                            <h2 class="font-alt mb-30 mt-40" id="contact">Booking and location</h2>
+                            <p><strong>Beauty Clinic Mallorca</strong><br>
+                            Calle Arquitecto Francisco Casas 17, Plaza Bendinat Local B10<br>
+                            07181 Bendinat, Mallorca<br>
+                            Phone: <a href="tel:+34971707725">+34 971 707 725</a><br>
+                            Email: <a href="mailto:info@beautyclinicmallorca.com">info@beautyclinicmallorca.com</a><br>
+                            <strong>Hours:</strong> Monday–Friday 09:30–16:00</p>
+
+                            <p>Free underground car park in Plaza Bendinat. 5 minutes by car from Palma, about 20 minutes from Andratx.</p>
+
+                            <p><a href="https://www.google.com/maps?cid=2149816206636862685" target="_blank" rel="noopener">Directions on Google Maps</a></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Content Section -->
+
+
+            <!-- Footer -->
+            <footer class="page-section bg-gray-lighter footer pb-60">
+                <div class="container">
+                    <!-- Footer Logo -->
+                    <div class="local-scroll mb-30 wow fadeInUp" data-wow-duration="1.2s">
+                        <a href="#top"><img src="images/clinic/dentaface-logo-black.png" width="180" height="36" alt="" /></a>
+                    </div>
+                    <!-- End Footer Logo -->
+            
+                    <!-- Footer Text -->
+                    <div class="footer-text">
+                        <!-- Copyright -->
+                        <div class="footer-copy font-alt">
+                            <a>&copy; Beauty Clinic Mallorca <span id="currentYear"></span>. All rights reserved.</a>
+                        </div>
+                        <!-- End Copyright -->
+                        <div class="footer-made">
+                            <a href="privacy.html">Privacy</a>
+                        </div>
+                    </div>
+                    <!-- End Footer Text -->
+                </div>
+            
+                <!-- Top Link -->
+                <div class="local-scroll">
+                    <a href="#top" class="link-to-top"><i class="fa fa-caret-up"></i></a>
+                </div>
+                <!-- End Top Link -->
+            </footer>
+            
+            <script>
+                document.getElementById("currentYear").textContent = new Date().getFullYear();
+            </script>
+            
+            <!-- End Footer -->
+
+
+        </div>
+        <!-- End Page Wrap -->
+
+
+        <!-- JS -->
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/SmoothScroll.js"></script>
+        <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+        <script type="text/javascript" src="js/jquery.localScroll.min.js"></script>
+        <script type="text/javascript" src="js/jquery.viewport.mini.js"></script>
+        <script type="text/javascript" src="js/jquery.countTo.js"></script>
+        <script type="text/javascript" src="js/jquery.appear.js"></script>
+        <script type="text/javascript" src="js/jquery.sticky.js"></script>
+        <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+        <script type="text/javascript" src="js/jquery.fitvids.js"></script>
+        <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript" src="js/wow.min.js"></script>
+        <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/jquery.simple-text-rotator.min.js"></script>
+        <script type="text/javascript" src="js/all.js"></script>
+        <!--[if lt IE 10]><script type="text/javascript" src="js/placeholder.js"></script><![endif]-->
+
+    </body>
+</html>

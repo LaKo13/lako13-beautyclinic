@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <!-- PostHog Analytics -->
+        <script>
+          !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+          posthog.init('phc_tHp7NezNwFJNqLXUGS9Qji3jzG8SHZQjVb4GDDnJrR3W', {
+            api_host: 'https://eu.i.posthog.com',
+            person_profiles: 'identified_only',
+            disable_session_recording: true,
+            persistence: 'memory'
+          })
+        </script>
+
+        <!-- Contact Click Tracking -->
+        <script>
+          document.addEventListener('click', function(e) {
+            var target = e.target.closest('a[href]');
+            if (!target) return;
+            var href = target.getAttribute('href');
+            var type = null;
+            if (href.startsWith('tel:')) type = 'phone';
+            else if (href.startsWith('mailto:')) type = 'email';
+            else if (href.includes('wa.me') || href.includes('whatsapp')) type = 'whatsapp';
+            else if (href.includes('google.com/maps') || href.includes('goo.gl/maps')) type = 'directions';
+            if (type) {
+              var section = target.closest('[id]');
+              var location = section ? section.id : 'unknown';
+              var lang = document.documentElement.lang || 'unknown';
+              posthog.capture('contact_click', { type: type, location: location, lang: lang });
+            }
+          });
+        </script>
+
+        <title>Hyaluron-Behandlung auf Mallorca | Dr. Erik Koerge, Bendinat</title>
+        <meta name="description" content="Faltenunterspritzung und Volumenaufbau mit Hyaluronsäure in Bendinat bei Palma. Persönliche Beratung durch Dr. Erik Koerge auf Deutsch. Mo–Fr 09:30–16:00.">
+        <meta charset="utf-8">
+        <meta name="author" content="Beauty Clinic Mallorca">
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+        <!-- Canonical & hreflang -->
+        <link rel="canonical" href="https://beautyclinicmallorca.com/hyaluron-mallorca.html">
+        <link rel="alternate" hreflang="de" href="https://beautyclinicmallorca.com/hyaluron-mallorca.html">
+        <link rel="alternate" hreflang="x-default" href="https://beautyclinicmallorca.com/hyaluron-mallorca.html">
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Beauty Clinic Mallorca">
+        <meta property="og:title" content="Hyaluron-Behandlung auf Mallorca | Dr. Erik Koerge">
+        <meta property="og:description" content="Faltenunterspritzung und Volumenaufbau mit Hyaluronsäure in Bendinat bei Palma.">
+        <meta property="og:url" content="https://beautyclinicmallorca.com/hyaluron-mallorca.html">
+        <meta property="og:locale" content="de_DE">
+        <meta property="og:image" content="https://beautyclinicmallorca.com/images/clinic/dermal-fillers.jpg">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Hyaluron-Behandlung auf Mallorca">
+        <meta name="twitter:description" content="Faltenunterspritzung mit Hyaluronsäure. Bendinat, Mallorca.">
+        <meta name="twitter:image" content="https://beautyclinicmallorca.com/images/clinic/dermal-fillers.jpg">
+
+        <!-- JSON-LD Schema -->
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Hyaluron-Behandlung auf Mallorca",
+  "description": "Faltenunterspritzung und Volumenaufbau mit Hyaluronsäure-Fillern bei Dr. Erik Koerge in Bendinat, Mallorca.",
+  "url": "https://beautyclinicmallorca.com/hyaluron-mallorca.html",
+  "inLanguage": "de",
+  "about": {
+    "@type": "MedicalProcedure",
+    "name": "Hyaluronsäure-Filler-Behandlung"
+  },
+  "publisher": {
+    "@id": "https://beautyclinicmallorca.com/#clinic"
+  }
+}
+        </script>
+
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wie lange hält eine Hyaluron-Behandlung?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die Ergebnisse halten in der Regel zwischen 6 und 18 Monaten an, abhängig von Produkt, behandeltem Bereich und individuellem Stoffwechsel, da die Hyaluronsäure auf natürliche Weise abgebaut wird."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was muss ich nach der Behandlung beachten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vermeiden Sie es, den behandelten Bereich mindestens 6 Stunden lang zu berühren, und verzichten Sie 24 bis 48 Stunden lang auf Sport, Alkohol, Sauna oder Solarium. Schwellungen, Rötungen oder Blutergüsse klingen in der Regel innerhalb weniger Tage ab. Das Auflegen von Eisbeuteln kann helfen. Das finale Erscheinungsbild zeigt sich nach etwa 2 Wochen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich mich im Urlaub auf Mallorca behandeln lassen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, wir behandeln auch Urlaubsgäste. Bitte beachten Sie, dass Schwellungen einige Tage anhalten können und eine Nachuntersuchung empfohlen wird. Wir sind Montag bis Freitag von 09:30 bis 16:00 Uhr geöffnet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welche Nebenwirkungen sind möglich?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Häufige Nebenwirkungen sind vorübergehende Schwellungen, Rötungen, Blutergüsse und Empfindlichkeit an den Injektionsstellen. Weniger häufig können Knoten, Asymmetrie oder allergische Reaktionen auftreten. Schwerwiegende Ereignisse wie Gefäßverschluss sind selten, erfordern jedoch sofortige ärztliche Behandlung. Dr. Koerge befolgt strenge Sicherheitsprotokolle, um Risiken zu minimieren."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was kostet Hyaluron auf Mallorca?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die Kosten hängen vom behandelten Bereich und der benötigten Menge ab und werden nach der Beratung individuell genannt."
+      }
+    }
+  ]
+}
+        </script>
+
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://beautyclinicmallorca.com/index-de.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Hyaluron-Behandlung",
+      "item": "https://beautyclinicmallorca.com/hyaluron-mallorca.html"
+    }
+  ]
+}
+        </script>
+
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="images/favicon.png">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style-responsive.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/vertical-rhythm.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    </head>
+    <body class="appear-animate">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="loader">Lädt...</div>
+        </div>
+        <!-- End Page Loader -->
+
+        <!-- Page Wrap -->
+        <div class="page" id="top">
+
+        <!-- Title Section -->
+        <section class="page-section bg-dark-alfa-30 bg-scroll" data-background="images/clinic/dermal-fillers.jpg" id="home">
+            <div class="relative container align-left">
+                <h1 class="hs-line-11 font-alt mb-0 mt-xs-20">
+                    Hyaluron-Behandlung auf Mallorca
+                </h1>
+            </div>
+        </section>
+        <!-- End Title Section -->
+
+
+        <!-- Navigation panel -->
+        <nav class="main-nav dark transparent stick-fixed">
+            <div class="full-wrapper relative clearfix">
+                <!-- Logo -->
+                <div class="nav-logo-wrap local-scroll">
+                    <a href="index-de.html" class="logo" title="Beauty Clinic Mallorca">
+                        <img src="images/clinic/dentaface-logo-white1.png" alt="Beauty Clinic Mallorca Logo" />
+                    </a>
+                </div>
+                <div class="mobile-nav">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <!-- Main Menu -->
+                <div class="inner-nav desktop-nav">
+                    <ul class="clearlist scroll-nav local-scroll">
+                        <li><a href="index-de.html#home">Home</a></li>
+                        <li><a href="index-de.html#about">Über uns</a></li>
+                        <li><a href="index-de.html#services">Dienstleistungen</a></li>
+                        <li><a href="index-de.html#contact">Kontakt</a></li>
+                        <li><a href="index.html"><img src="images/uk-flag.png" alt="Switch to English" width="20" height="20"/></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navigation panel -->
+
+
+        <!-- Content Section -->
+        <section class="page-section" id="content">
+            <div class="container relative">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="text">
+
+                            <h2 class="font-alt mb-30">Was Hyaluronsäure-Filler bewirken können</h2>
+                            <p>Hyaluronsäure-Filler stellen verlorenes Volumen wieder her, mildern Falten und füllen eingefallene Areale sowie tiefe Falten auf. Sie können auch Konturen wie Lippen und Wangen verbessern. Die Behandlung zielt auf ein verjüngtes, natürliches Erscheinungsbild ab.</p>
+
+                            <h2 class="font-alt mb-30 mt-40">Behandelbare Bereiche</h2>
+                            <p>Hyaluronsäure-Filler eignen sich für verschiedene Bereiche des Gesichts: Falten, eingefallene Areale, Lippen und Wangen. Die Eignung für Ihre individuellen Ziele wird in der Beratung mit Dr. Koerge besprochen.</p>
+
+                            <h2 class="font-alt mb-30 mt-40">Für wen geeignet und wann nicht</h2>
+                            <p>Filler sind für Erwachsene mit leichten bis mittelschweren Alterungserscheinungen geeignet, die eine nicht-chirurgische Verjüngung bevorzugen. Sie sind möglicherweise nicht geeignet während Schwangerschaft, Stillzeit oder bei aktiven Hautinfektionen. Dr. Koerge bewertet Ihren Hautzustand, Ihre Krankengeschichte und Ihre ästhetischen Ziele, um den am besten geeigneten Ansatz zu empfehlen.</p>
+
+                            <h2 class="font-alt mb-30 mt-40">Ablauf: Beratung, Behandlung, Ergebnis</h2>
+                            <p>In der Beratung bespricht Dr. Koerge Ihre Wünsche und erläutert den Behandlungsablauf. Die Behandlung selbst ist relativ kurz. Das endgültige Ergebnis ist nach etwa 2 Wochen sichtbar, wenn anfängliche Schwellungen abgeklungen sind.</p>
+
+                            <h2 class="font-alt mb-30 mt-40">Wie lange hält Hyaluron?</h2>
+                            <p>Die Ergebnisse halten in der Regel zwischen 6 und 18 Monaten an, abhängig von Produkt, behandeltem Bereich und individuellem Stoffwechsel. Hyaluronsäure-Filler werden im Laufe der Zeit auf natürliche Weise abgebaut. Erhaltungsbehandlungen können helfen, das verbesserte Erscheinungsbild zu bewahren.</p>
+
+                            <h2 class="font-alt mb-30 mt-40">Nachsorge</h2>
+                            <p>Vermeiden Sie es, die behandelten Bereiche mindestens 6 Stunden lang zu berühren oder Druck auszuüben. Verzichten Sie 24 bis 48 Stunden lang auf anstrengende Übungen, Alkoholkonsum und übermäßige Hitzeeinwirkung (Sauna, Solarium). Schwellungen, Rötungen oder Blutergüsse klingen in der Regel innerhalb weniger Tage ab. Das Auflegen von Eisbeuteln kann helfen. Schlafen Sie in der ersten Nacht mit erhöhtem Kopf.</p>
+
+                            <h2 class="font-alt mb-30 mt-40">Mögliche Risiken und Nebenwirkungen</h2>
+                            <p>Häufige Nebenwirkungen sind vorübergehende Schwellungen, Rötungen, Blutergüsse und Empfindlichkeit an den Injektionsstellen. Weniger häufig können Knoten, Asymmetrie oder allergische Reaktionen auftreten. Schwerwiegende Ereignisse wie Gefäßverschluss sind selten, erfordern jedoch sofortige ärztliche Behandlung. Dr. Koerge befolgt strenge Sicherheitsprotokolle, um Risiken zu minimieren und optimale Ergebnisse zu gewährleisten.</p>
+
+                            <h2 class="font-alt mb-30 mt-40">Natürliches Ergebnis statt „verändert"</h2>
+                            <p>Unsere Philosophie ist es, Ihnen ein frischeres Aussehen zu geben, ohne dass Sie merkwürdig verändert aussehen. Dr. Koerge hat mehr als 20 Jahre Erfahrung in ästhetischen Behandlungen und verfolgt einen natürlichen, individuellen Ansatz für jeden Patienten.</p>
+
+                            <h2 class="font-alt mb-30 mt-40">Kosten</h2>
+                            <p>Die Kosten hängen vom behandelten Bereich und der benötigten Menge ab und werden nach der Beratung individuell genannt.</p>
+
+                            <h3 class="font-alt mb-20 mt-40">Häufig gestellte Fragen</h3>
+
+                            <div class="faq-item mb-30">
+                                <h4 class="font-alt mb-10">Wie lange hält eine Hyaluron-Behandlung?</h4>
+                                <p>Die Ergebnisse halten in der Regel zwischen 6 und 18 Monaten an, abhängig von Produkt, behandeltem Bereich und individuellem Stoffwechsel.</p>
+                            </div>
+
+                            <div class="faq-item mb-30">
+                                <h4 class="font-alt mb-10">Was muss ich nach der Behandlung beachten?</h4>
+                                <p>Vermeiden Sie es, den behandelten Bereich mindestens 6 Stunden lang zu berühren, und verzichten Sie 24 bis 48 Stunden lang auf Sport, Alkohol, Sauna oder Solarium. Schwellungen klingen in der Regel innerhalb weniger Tage ab.</p>
+                            </div>
+
+                            <div class="faq-item mb-30">
+                                <h4 class="font-alt mb-10">Kann ich mich im Urlaub auf Mallorca behandeln lassen?</h4>
+                                <p>Ja, wir behandeln auch Urlaubsgäste. Bitte beachten Sie, dass Schwellungen einige Tage anhalten können und eine Nachuntersuchung empfohlen wird.</p>
+                            </div>
+
+                            <div class="faq-item mb-30">
+                                <h4 class="font-alt mb-10">Welche Nebenwirkungen sind möglich?</h4>
+                                <p>Häufige Nebenwirkungen sind vorübergehende Schwellungen, Rötungen, Blutergüsse und Empfindlichkeit. Schwerwiegende Ereignisse sind selten.</p>
+                            </div>
+
+                            <div class="faq-item mb-30">
+                                <h4 class="font-alt mb-10">Was kostet Hyaluron auf Mallorca?</h4>
+                                <p>Die Kosten hängen vom behandelten Bereich und der benötigten Menge ab und werden nach der Beratung individuell genannt.</p>
+                            </div>
+
+                            <h2 class="font-alt mb-30 mt-40" id="contact">Anfahrt Plaza Bendinat</h2>
+                            <p><strong>Beauty Clinic Mallorca</strong><br>
+                            Calle Arquitecto Francisco Casas 17, Plaza Bendinat Local B10<br>
+                            07181 Bendinat, Mallorca<br>
+                            Telefon: <a href="tel:+34971707725">+34 971 707 725</a><br>
+                            E-Mail: <a href="mailto:info@beautyclinicmallorca.com">info@beautyclinicmallorca.com</a><br>
+                            <strong>Öffnungszeiten:</strong> Montag–Freitag 09:30–16:00</p>
+
+                            <p>Kostenlose Tiefgarage in Plaza Bendinat. 5 Minuten mit dem Auto von Palma, etwa 20 Minuten von Andratx.</p>
+
+                            <p><a href="https://www.google.com/maps?cid=2149816206636862685" target="_blank" rel="noopener">Wegbeschreibung auf Google Maps</a></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Content Section -->
+
+
+            <!-- Footer -->
+            <footer class="page-section bg-gray-lighter footer pb-60">
+                <div class="container">
+                    <!-- Footer Logo -->
+                    <div class="local-scroll mb-30 wow fadeInUp" data-wow-duration="1.2s">
+                        <a href="#top"><img src="images/clinic/dentaface-logo-black.png" width="180" height="36" alt="" /></a>
+                    </div>
+                    <!-- End Footer Logo -->
+            
+                    <!-- Footer Text -->
+                    <div class="footer-text">
+                        <!-- Copyright -->
+                        <div class="footer-copy font-alt">
+                            <a>&copy; Beauty Clinic Mallorca <span id="currentYear"></span>. Alle Rechte vorbehalten.</a>
+                        </div>
+                        <!-- End Copyright -->
+                        <div class="footer-made">
+                            <a href="datenschutz.html">Datenschutz</a>
+                        </div>
+                    </div>
+                    <!-- End Footer Text -->
+                </div>
+            
+                <!-- Top Link -->
+                <div class="local-scroll">
+                    <a href="#top" class="link-to-top"><i class="fa fa-caret-up"></i></a>
+                </div>
+                <!-- End Top Link -->
+            </footer>
+            
+            <script>
+                document.getElementById("currentYear").textContent = new Date().getFullYear();
+            </script>
+            
+            <!-- End Footer -->
+
+
+        </div>
+        <!-- End Page Wrap -->
+
+
+        <!-- JS -->
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/SmoothScroll.js"></script>
+        <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+        <script type="text/javascript" src="js/jquery.localScroll.min.js"></script>
+        <script type="text/javascript" src="js/jquery.viewport.mini.js"></script>
+        <script type="text/javascript" src="js/jquery.countTo.js"></script>
+        <script type="text/javascript" src="js/jquery.appear.js"></script>
+        <script type="text/javascript" src="js/jquery.sticky.js"></script>
+        <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+        <script type="text/javascript" src="js/jquery.fitvids.js"></script>
+        <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript" src="js/wow.min.js"></script>
+        <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/jquery.simple-text-rotator.min.js"></script>
+        <script type="text/javascript" src="js/all.js"></script>
+        <!--[if lt IE 10]><script type="text/javascript" src="js/placeholder.js"></script><![endif]-->
+
+    </body>
+</html>

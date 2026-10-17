@@ -5,6 +5,7 @@
     <loc>https://beautyclinicmallorca.com/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://beautyclinicmallorca.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://beautyclinicmallorca.com/index-de.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://beautyclinicmallorca.com/index-es.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://beautyclinicmallorca.com/"/>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -13,9 +14,40 @@
     <loc>https://beautyclinicmallorca.com/index-de.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://beautyclinicmallorca.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://beautyclinicmallorca.com/index-de.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://beautyclinicmallorca.com/index-es.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://beautyclinicmallorca.com/"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beautyclinicmallorca.com/index-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beautyclinicmallorca.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beautyclinicmallorca.com/index-de.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://beautyclinicmallorca.com/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://beautyclinicmallorca.com/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beautyclinicmallorca.com/arrugas-expresion-palma.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://beautyclinicmallorca.com/arrugas-expresion-palma.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://beautyclinicmallorca.com/arrugas-expresion-palma.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beautyclinicmallorca.com/hyaluron-mallorca.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beautyclinicmallorca.com/hyaluron-mallorca.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://beautyclinicmallorca.com/hyaluron-mallorca.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beautyclinicmallorca.com/biorevitalization-mallorca.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beautyclinicmallorca.com/biorevitalization-mallorca.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://beautyclinicmallorca.com/biorevitalization-mallorca.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beautyclinicmallorca.com/privacy.html</loc>
