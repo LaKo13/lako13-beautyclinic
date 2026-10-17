@@ -41,7 +41,32 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
         with:
-          fetch-depth: 0   # full history so Claude can rebase PR branches onto main
+          fetch-depth: 0   # full history so Claude can merge main into PR branches
+
+      # Runtime + deps so Claude can run the repo's checks before pushing.
+      # Same file in every repo: each step only runs if its manifest exists.
+      - name: Set up Node
+        if: hashFiles('package.json') != ''
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Install npm dependencies
+        if: hashFiles('package.json') != ''
+        continue-on-error: true   # let Claude see and fix a broken install
+        run: |
+          if [ -f package-lock.json ]; then npm ci; else npm install --no-audit --no-fund; fi
+      - name: Set up Python
+        if: hashFiles('requirements*.txt', 'pyproject.toml') != ''
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install Python dependencies
+        if: hashFiles('requirements*.txt', 'pyproject.toml') != ''
+        continue-on-error: true
+        run: |
+          python -m pip install --upgrade pip
+          for f in requirements.txt requirements-dev.txt; do [ -f "$f" ] && pip install -r "$f"; done
+          pip install pytest ruff
 
       # Model per request: default sonnet; "[opus]" or "[haiku]" in the triggering
       # comment / review / issue picks that model ([opus] wins if both appear).
@@ -77,6 +102,10 @@ jobs:
           trigger_phrase: "@claude"
           # Only pass LaKo13's (and Claude's own) comments into Claude's context.
           include_comments_by_actor: "LaKo13,claude[bot]"
+          # Bash is limited to installs, checks and safe git (merge main in, never
+          # rebase or force-push). No curl/wget or other network tools.
           claude_args: |
             --model ${{ steps.model.outputs.model }}
             --max-turns 60
+            --allowedTools "Bash(git fetch:*),Bash(git merge:*),Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(git show:*),Bash(git add:*),Bash(git rm:*),Bash(git commit:*),Bash(git push:*),Bash(git checkout:*),Bash(git switch:*),Bash(git branch:*),Bash(npm ci:*),Bash(npm install:*),Bash(npm test:*),Bash(npm run:*),Bash(npx tsc:*),Bash(node:*),Bash(pip install:*),Bash(python -m pip install:*),Bash(pytest:*),Bash(python -m pytest:*),Bash(python:*),Bash(ruff:*),Bash(python -m ruff:*)"
+            --disallowedTools "Bash(git rebase:*),Bash(git push * --force*),Bash(git push --force*),Bash(git push * -f),Bash(git push * -f *),Bash(git push -f *),Bash(git push *+*),Bash(git push * --mirror*),Bash(git push * --delete*),Bash(git push * -d *),Bash(git reset --hard*),Bash(curl:*),Bash(wget:*)"
