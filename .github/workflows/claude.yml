@@ -1,0 +1,54 @@
+name: Claude Code
+
+# @claude on issues/PRs -> Claude Code run billed to Laurent's Claude subscription
+# (CLAUDE_CODE_OAUTH_TOKEN from `claude setup-token`). Only LaKo13 can trigger it.
+
+on:
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+  issues:
+    types: [opened, assigned]
+  pull_request_review:
+    types: [submitted]
+
+# One run at a time per issue/PR; queued runs wait instead of overlapping.
+concurrency:
+  group: claude-${{ github.event.issue.number || github.event.pull_request.number }}
+  cancel-in-progress: false
+
+jobs:
+  claude:
+    # Must mention @claude AND be authored/sent by LaKo13, so outsiders can't spend the quota.
+    if: |
+      github.event.sender.login == 'LaKo13' && (
+        (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude') && github.event.comment.user.login == 'LaKo13') ||
+        (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude') && github.event.comment.user.login == 'LaKo13') ||
+        (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude') && github.event.review.user.login == 'LaKo13') ||
+        (github.event_name == 'issues' && github.event.issue.user.login == 'LaKo13' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')))
+      )
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      id-token: write   # required by the action's Claude GitHub App auth
+      actions: read     # lets Claude read CI results on PRs
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0   # full history so Claude can rebase PR branches onto main
+
+      - name: Run Claude Code
+        id: claude
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          trigger_phrase: "@claude"
+          # Only pass LaKo13's (and Claude's own) comments into Claude's context.
+          include_comments_by_actor: "LaKo13,claude[bot]"
+          claude_args: |
+            --max-turns 60
