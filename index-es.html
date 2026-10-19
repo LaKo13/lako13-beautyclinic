@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- PostHog Analytics -->
+        <script>
+          !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+          posthog.init('phc_tHp7NezNwFJNqLXUGS9Qji3jzG8SHZQjVb4GDDnJrR3W', {
+            api_host: 'https://eu.i.posthog.com',
+            person_profiles: 'identified_only',
+            disable_session_recording: true,
+            persistence: 'memory'
+          })
+        </script>
+
+        <!-- Contact Click Tracking -->
+        <script>
+          document.addEventListener('click', function(e) {
+            var target = e.target.closest('a[href]');
+            if (!target) return;
+            var href = target.getAttribute('href');
+            var type = null;
+            if (href.startsWith('tel:')) type = 'phone';
+            else if (href.startsWith('mailto:')) type = 'email';
+            else if (href.includes('wa.me') || href.includes('whatsapp')) type = 'whatsapp';
+            else if (href.includes('google.com/maps') || href.includes('goo.gl/maps')) type = 'directions';
+            if (type) {
+              var section = target.closest('[id]');
+              var location = section ? section.id : 'unknown';
+              var lang = document.documentElement.lang || 'unknown';
+              posthog.capture('contact_click', { type: type, location: location, lang: lang });
+            }
+          });
+        </script>
+
+        <title>Medicina estética en Bendinat, Mallorca | Beauty Clinic Mallorca</title>
+        <meta name="description" content="Tratamientos de medicina estética mínimamente invasivos con el Dr. Erik Koerge en Plaza Bendinat, a 5 min de Palma. Lun–Vie 09:30–16:00. Parking gratuito.">
+        <meta charset="utf-8">
+        <meta name="author" content="Beauty Clinic Mallorca">
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+        <!-- Canonical & hreflang -->
+        <link rel="canonical" href="https://beautyclinicmallorca.com/index-es.html">
+        <link rel="alternate" hreflang="en" href="https://beautyclinicmallorca.com/">
+        <link rel="alternate" hreflang="de" href="https://beautyclinicmallorca.com/index-de.html">
+        <link rel="alternate" hreflang="es" href="https://beautyclinicmallorca.com/index-es.html">
+        <link rel="alternate" hreflang="x-default" href="https://beautyclinicmallorca.com/">
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Beauty Clinic Mallorca">
+        <meta property="og:title" content="Medicina estética en Bendinat, Mallorca | Beauty Clinic Mallorca">
+        <meta property="og:description" content="Tratamientos de medicina estética mínimamente invasivos con el Dr. Erik Koerge en Plaza Bendinat, a 5 min de Palma. Lun–Vie 09:30–16:00. Parking gratuito.">
+        <meta property="og:url" content="https://beautyclinicmallorca.com/index-es.html">
+        <meta property="og:locale" content="es_ES">
+        <meta property="og:locale:alternate" content="en_GB">
+        <meta property="og:locale:alternate" content="de_DE">
+        <meta property="og:image" content="https://beautyclinicmallorca.com/images/clinic/Dentaface_Cover.jpg">
+        <meta property="og:image:alt" content="Beauty Clinic Mallorca">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Medicina estética en Bendinat, Mallorca | Beauty Clinic Mallorca">
+        <meta name="twitter:description" content="Tratamientos de medicina estética mínimamente invasivos con el Dr. Erik Koerge en Plaza Bendinat, a 5 min de Palma. Lun–Vie 09:30–16:00. Parking gratuito.">
+        <meta name="twitter:image" content="https://beautyclinicmallorca.com/images/clinic/Dentaface_Cover.jpg">
+
+        <!-- JSON-LD Schema -->
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "MedicalClinic",
+    "LocalBusiness"
+  ],
+  "@id": "https://beautyclinicmallorca.com/#clinic",
+  "name": "Beauty Clinic Mallorca",
+  "description": "Clínica de medicina estética en Bendinat, Mallorca, con tratamientos mínimamente invasivos del Dr. Erik Koerge: tratamiento de arrugas de expresión, rellenos de ácido hialurónico, mesoterapia facial y biorrevitalización.",
+  "url": "https://beautyclinicmallorca.com/",
+  "telephone": "+34 971 707 725",
+  "email": "info@beautyclinicmallorca.com",
+  "image": "https://beautyclinicmallorca.com/images/clinic/Dentaface_Cover.jpg",
+  "logo": "https://beautyclinicmallorca.com/images/clinic/dentaface-logo-black.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle Arquitecto Francisco Casas 17, Plaza Bendinat Local B10",
+    "addressLocality": "Bendinat",
+    "addressRegion": "Illes Balears",
+    "postalCode": "07181",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 39.5401567,
+    "longitude": 2.5831752
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:30",
+      "closes": "16:00"
+    }
+  ],
+  "employee": {
+    "@type": "Person",
+    "name": "Dr. Erik Koerge",
+    "jobTitle": "Lead practitioner"
+  },
+  "hasMap": "https://www.google.com/maps?cid=2149816206636862685",
+  "sameAs": ["https://www.google.com/maps?cid=2149816206636862685"]
+}
+        </script>
+
+        <!-- WebPage Schema -->
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://beautyclinicmallorca.com/index-es.html#webpage",
+  "url": "https://beautyclinicmallorca.com/index-es.html",
+  "name": "Medicina estética en Bendinat, Mallorca | Beauty Clinic Mallorca",
+  "inLanguage": "es",
+  "about": {"@id": "https://beautyclinicmallorca.com/#clinic"},
+  "publisher": {"@id": "https://beautyclinicmallorca.com/#clinic"}
+}
+        </script>
+
+        <!-- FAQ Schema -->
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Quién puede recibir el tratamiento de arrugas de expresión?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El tratamiento está indicado para adultos a partir de 18 años que desean reducir las arrugas dinámicas causadas por la expresión facial, en particular las líneas de la frente, las patas de gallo y las arrugas del entrecejo. Durante la consulta en Beauty Clinic Mallorca, el Dr. Koerge revisará su historial médico y hablará con usted sobre sus objetivos estéticos para determinar si el tratamiento es adecuado para usted. Puede no estar recomendado durante el embarazo o la lactancia, ni en personas con determinadas enfermedades neurológicas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto duran los resultados del tratamiento de arrugas de expresión?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los resultados suelen durar entre 3 y 6 meses, según factores individuales como el metabolismo, la actividad muscular y la zona tratada. A medida que el efecto desaparece de forma gradual, la actividad muscular vuelve y las arrugas pueden reaparecer. Los tratamientos de mantenimiento periódicos pueden ayudar a conservar el aspecto deseado. El Dr. Koerge le recomendará un calendario de tratamiento adecuado en las citas de seguimiento."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué cuidados se recomiendan después del tratamiento de arrugas de expresión?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Después del tratamiento, evite frotar o masajear las zonas tratadas durante al menos 24 horas. Evite el ejercicio intenso, tumbarse en posición horizontal o inclinarse hacia delante durante las 4 horas siguientes. Puede aparecer un ligero enrojecimiento, hinchazón o pequeños hematomas en los puntos de inyección, que suelen desaparecer en unas horas o días. La mayoría de los pacientes puede retomar sus actividades habituales de inmediato. El resultado completo es visible en un plazo de 7 a 14 días."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué riesgos y efectos secundarios tiene el tratamiento de arrugas de expresión?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los efectos secundarios más frecuentes son hematomas, hinchazón o molestias leves y temporales en los puntos de inyección. Con poca frecuencia pueden aparecer dolor de cabeza, síntomas similares a los de la gripe o una caída temporal del párpado. El Dr. Koerge le explicará todos los posibles riesgos durante la consulta y adaptará el tratamiento a sus necesidades individuales."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Quién es buen candidato para los rellenos de ácido hialurónico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los rellenos están indicados para adultos que desean restaurar el volumen facial, suavizar arrugas o realzar contornos faciales como los labios y los pómulos. Son adecuados para personas con signos de envejecimiento leves o moderados que prefieren un rejuvenecimiento sin cirugía. En Beauty Clinic Mallorca, el Dr. Koerge valora el estado de su piel, su historial médico y sus objetivos estéticos para recomendarle el relleno de ácido hialurónico más adecuado. Los rellenos pueden no ser adecuados durante el embarazo o la lactancia, ni en caso de infecciones cutáneas activas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto duran los resultados de los rellenos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La duración depende del tipo de producto, de la zona tratada y del metabolismo de cada persona. Los resultados suelen durar entre 6 y 18 meses. El ácido hialurónico se degrada de forma natural y gradual con el tiempo. Los tratamientos de mantenimiento pueden ayudar a conservar el resultado. El Dr. Koerge le orientará de forma personalizada sobre los intervalos de tratamiento adecuados según sus necesidades y el relleno utilizado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué cuidados se necesitan después de un tratamiento con rellenos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Después del tratamiento, evite tocar o presionar las zonas tratadas durante al menos 6 horas. Evite el ejercicio intenso, el alcohol y la exposición a calor excesivo (sauna, rayos UVA) durante 24 a 48 horas. Puede aparecer una ligera hinchazón, enrojecimiento o hematomas, que suelen remitir en unos días. Aplicar frío puede ayudar a reducir la hinchazón. Duerma con la cabeza elevada la primera noche. El resultado mejora a medida que desaparece la hinchazón inicial, y el aspecto final es visible en unas 2 semanas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué riesgos tienen los rellenos de ácido hialurónico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los efectos secundarios más frecuentes son hinchazón, hematomas, enrojecimiento y sensibilidad temporales en los puntos de inyección. Con menor frecuencia pueden aparecer bultos, asimetrías o reacciones alérgicas. Las complicaciones graves, como la oclusión vascular, son raras, pero requieren atención médica inmediata. El Dr. Koerge sigue protocolos estrictos para reducir los riesgos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Quién puede beneficiarse de la mesoterapia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La mesoterapia está indicada para adultos que desean mejorar la calidad, la hidratación y la textura de la piel del rostro, el cuello y el escote. Es especialmente adecuada para quienes presentan los primeros signos de envejecimiento, líneas finas, falta de luminosidad o daños cutáneos causados por el entorno. El Dr. Koerge valorará su tipo de piel y sus inquietudes durante la consulta para determinar si la mesoterapia es adecuada para usted. Puede no estar recomendada durante el embarazo o la lactancia, ni en personas con afecciones o infecciones cutáneas activas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto duran los resultados de la mesoterapia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los resultados varían según el estado de la piel, los hábitos de vida y el protocolo de tratamiento. Las primeras mejoras en la luminosidad y la hidratación pueden apreciarse en pocos días. Para obtener resultados óptimos suele ser necesario un ciclo de 3 a 6 sesiones, con un intervalo de 2 a 4 semanas entre ellas. Los resultados pueden durar varios meses; se recomiendan tratamientos de mantenimiento cada 3 a 6 meses para mantener el rejuvenecimiento de la piel y protegerla frente a los daños ambientales."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué cuidados se necesitan después de la mesoterapia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Después de la mesoterapia, evite tocar o lavar la zona tratada durante al menos 6 horas. No aplique maquillaje ni productos cosméticos agresivos y evite la exposición directa al sol o a fuentes de calor durante 24 horas. Un ligero enrojecimiento, hinchazón o pequeñas marcas de inyección son normales y suelen desaparecer en 24 a 48 horas. Evite el ejercicio intenso y el alcohol durante las 24 horas siguientes. Aplique a diario un protector solar de amplio espectro para proteger su piel y favorecer el resultado del tratamiento."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Tiene riesgos la mesoterapia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los efectos secundarios más frecuentes son enrojecimiento, hinchazón, hematomas o ligeras molestias temporales en los puntos de inyección. En raras ocasiones pueden producirse infecciones, reacciones alérgicas o alteraciones de la pigmentación de la piel. El Dr. Koerge utiliza productos de calidad y sigue estrictas normas de higiene para reducir los riesgos."
+      }
+    }
+  ]
+}
+        </script>
+
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="images/favicon.png">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style-responsive.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/vertical-rhythm.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    </head>
+    <body class="appear-animate">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="loader">Cargando...</div>
+        </div>
+        <!-- End Page Loader -->
+
+        <!-- Page Wrap -->
+        <div class="page" id="top">
+
+        <!-- Home Section -->
+        <section class="home-section bg-dark-alfa-30 parallax-2" data-background="images/clinic/Dentaface_Cover.jpg" id="home">
+            <div class="js-height-full container">
+
+                <!-- Hero Content -->
+                <div class="home-content">
+                    <div class="home-text">
+
+                    <h1 class="hs-line-8 no-transp font-alt mb-50 mb-xs-30">
+                        Medicina estética en Bendinat, Mallorca
+                    </h1>
+
+                    <h2 class="hs-line-14 font-alt mb-50 mb-xs-30">
+                        Beauty Clinic Mallorca
+                    </h2>
+
+                    <div class="local-scroll">
+                        <a href="#about" class="btn btn-mod btn-border-w btn-medium btn-round hidden-xs">Sobre nosotros</a>
+                        <span class="hidden-xs">&nbsp;</span>
+                        <a href="#services" class="btn btn-mod btn-border-w btn-medium btn-round hidden-xs">Tratamientos</a>
+                    </div>
+
+                    </div>
+                </div>
+                <!-- End Hero Content -->
+
+                <img src="images/clinic/Dentaface_Cover.jpg" alt="Medicina estética y rejuvenecimiento facial en Beauty Clinic Mallorca">
+
+                <!-- Scroll Down -->
+                <div class="local-scroll">
+                    <a href="#about" class="scroll-down"><i class="fa fa-angle-down scroll-down-icon"></i></a>
+                </div>
+                <!-- End Scroll Down -->
+
+            </div>
+        </section>
+        <!-- End Home Section -->
+
+
+        <!-- Navigation panel -->
+        <nav class="main-nav dark transparent stick-fixed">
+            <div class="full-wrapper relative clearfix">
+                <!-- Logo ( * your text or image into link tag *) -->
+                <div class="nav-logo-wrap local-scroll">
+                    <a href="#top" class="logo" title="Beauty Clinic Mallorca - Medicina estética en Bendinat">
+                        <img src="images/clinic/dentaface-logo-white1.png" alt="Logotipo de Beauty Clinic Mallorca" />
+                    </a>
+                </div>
+                <div class="mobile-nav">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <!-- Main Menu -->
+                <div class="inner-nav desktop-nav">
+                    <ul class="clearlist scroll-nav local-scroll">
+                        <li class="active"><a href="#home">Inicio</a></li>
+                        <li><a href="#about">Sobre nosotros</a></li>
+                        <li><a href="#services">Tratamientos</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                        <li><a href="index.html"><img src="images/uk-flag.png" alt="English version" width="20" height="20"/></a></li>
+                        <li><a href="index-de.html"><img src="images/german-flag.png" alt="Deutsche Version" width="20" height="20"/></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navigation panel -->
+
+
+
+     <!-- About Section -->
+        <section class="page-section" id="about">
+            <div class="container relative">
+
+                <h2 class="section-title font-alt align-left mb-70 mb-sm-40">
+                    Sobre nosotros
+                </h2>
+
+                <div class="section-text mb-50 mb-sm-20">
+
+                    <div class="col-md-4 col-sm-6 mb-sm-50 mb-xs-30">
+                        <p>Beauty Clinic Mallorca lleva 15 años en funcionamiento. Ofrecemos un servicio completo de medicina estética moderna, que incluye el tratamiento de las arrugas de expresión. Nuestra sala de tratamiento se encuentra en la planta baja y cuenta con equipamiento actual y productos de fabricantes reconocidos.</p>
+                        <p>Nuestra clínica se encuentra en Plaza Bendinat, donde encontrará otras consultas médicas, tiendas, varios restaurantes y un parking subterráneo gratuito para todos los pacientes. Estamos a solo 5 minutos en coche de Palma y a unos 20 minutos de Andratx.</p>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 mb-sm-50 mb-xs-30">
+                    <p>En Beauty Clinic Mallorca, el concepto antienvejecimiento del Dr. Erik Koerge incluye una serie de terapias mínimamente invasivas, adaptadas a distintas necesidades, como la calidad y la textura de la piel, el contorno facial y la firmeza cutánea. Nuestro objetivo es refrescar y rejuvenecer su aspecto sin que parezca extrañamente cambiado.</p>
+                    <p>El Dr. Erik Koerge cuenta con más de 20 años de experiencia en el tratamiento de arrugas y en el rejuvenecimiento facial sin cirugía, con formación en institutos de referencia. Nuestra clínica aspira a los más altos estándares en todos sus tratamientos, con la menor interrupción posible de su vida cotidiana, tanto si reside en Mallorca como si nos visita durante sus vacaciones.</p>
+                    </div>
+
+                    <div class="col-sm-4 mb-xs-30 wow fadeInUp">
+                        <div class="team-item">
+                            <div class="team-item-image">
+                                <img src="images/clinic/dr-koerge-profile.jpg" alt="Dr. Erik Koerge" />
+                            </div>
+                            <div class="team-item-descr font-alt">
+                                <div class="team-item-name">
+                                    Dr. Erik Koerge
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Section -->
+
+
+            <!-- Divider -->
+            <hr class="mt-0 mb-0 "/>
+            <!-- End Divider -->
+
+        <!-- Services Section -->
+        <section class="page-section" id="services">
+            <div class="container relative">
+                <h2 class="section-title font-alt align-left mb-70 mb-sm-40">
+                    Nuestros tratamientos
+                </h2>
+
+                <!-- Features Grid -->
+                <div class="row alt-features-grid mb-70 mb-xs-40">
+
+                    <!-- Text Item -->
+                    <div class="col-sm-3">
+                        <div class="alt-features-item align-center">
+                            <div class="alt-features-descr align-left">
+                                En Beauty Clinic Mallorca ofrecemos una amplia gama de tratamientos de medicina estética, adaptados a sus necesidades y objetivos personales.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Text Item -->
+
+                    <!-- Features Item -->
+                    <div class="col-sm-3">
+                        <div class="alt-features-item align-center">
+                            <div class="alt-features-icon">
+                                <i class="far fa-comments"></i>
+                            </div>
+                            <h3 class="alt-features-title font-alt">Consulta</h3>
+                        </div>
+                    </div>
+                    <!-- End Features Item -->
+
+                    <!-- Features Item -->
+                    <div class="col-sm-3">
+                        <div class="alt-features-item align-center">
+                            <div class="alt-features-icon">
+                                <i class="fas fa-syringe"></i>
+                            </div>
+                            <h3 class="alt-features-title font-alt">Tratamiento</h3>
+                        </div>
+                    </div>
+                    <!-- End Features Item -->
+
+                    <!-- Features Item -->
+                    <div class="col-sm-3">
+                        <div class="alt-features-item align-center">
+                            <div class="alt-features-icon">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <h3 class="alt-features-title font-alt">Resultados</h3>
+                        </div>
+                    </div>
+                    <!-- End Features Item -->
+
+                </div>
+                <!-- End Features Grid -->
+
+                   <div class="row multi-columns-row">
+                    <!-- Post Item -->
+                    <div class="col-sm-6 col-md-4 col-lg-4 mb-md-50 wow fadeIn" data-wow-delay="0.1s" data-wow-duration="2s">
+                      <div class="post-prev-img">
+                        <img src="images/clinic/dermal-fillers.jpg" alt="Restauración del volumen facial con rellenos de ácido hialurónico" />
+                      </div>
+                      <div class="post-prev-title font-alt">Rellenos de ácido hialurónico</div>
+                      <div class="post-prev-text">Ofrecemos rellenos de ácido hialurónico, que reponen el volumen perdido, suavizan las arrugas y mejoran la firmeza de la piel. Permiten rellenar zonas hundidas y surcos marcados para un aspecto más descansado. Estos rellenos temporales también pueden mejorar el tono y la textura de la piel y podrían ayudar a retrasar la aparición de nuevos signos de envejecimiento.</div>
+                    </div>
+                    <!-- End Post Item -->
+                    <!-- Post Item -->
+                    <div class="col-sm-6 col-md-4 col-lg-4 mb-md-50 wow fadeIn" data-wow-delay="0.2s" data-wow-duration="2s">
+                      <div class="post-prev-img">
+                        <img src="images/clinic/Mesotherapy.jpg" alt="Tratamiento facial en Beauty Clinic Mallorca" />
+                      </div>
+                      <div class="post-prev-title font-alt">Tratamiento de arrugas de expresión</div>
+                      <div class="post-prev-text">Tratamiento médico de las arrugas de expresión de la frente, del entrecejo y de la zona de alrededor de los ojos. Estas líneas se forman por la actividad de los músculos de la expresión facial. Antes de cualquier tratamiento, el Dr. Koerge realiza una valoración médica para determinar si es adecuado para usted. <a href="arrugas-expresion-palma.html">Más información sobre el tratamiento de arrugas de expresión</a></div>
+                    </div>
+                    <!-- End Post Item -->
+                    <!-- Post Item -->
+                    <div class="col-sm-6 col-md-4 col-lg-4 mb-md-50 wow fadeIn" data-wow-delay="0.3s" data-wow-duration="2s">
+                      <div class="post-prev-img">
+                        <img src="images/clinic/mesotherapy.jpg" alt="Revitalización de la piel del rostro con mesoterapia facial en Beauty Clinic Mallorca" />
+                      </div>
+                      <div class="post-prev-title font-alt">Mesoterapia facial</div>
+                      <div class="post-prev-text">Nuestro tratamiento de mesoterapia facial estimula la piel para que se regenere y repare de forma natural, para una piel de aspecto más liso, luminoso, joven y saludable. Esta técnica se centra en el rostro, el cuello y el escote, las zonas más afectadas por el envejecimiento, que se manifiesta en líneas finas, arrugas, pérdida de elasticidad y pigmentación irregular por la exposición a agentes ambientales como el sol, la suciedad, los gases de escape y el humo.
+
+                      </div>
+                    </div>
+
+                    <!-- End Post Item -->
+                  </div>
+
+                  <div class="row multi-columns-row">
+                    <!-- Post Item -->
+                    <div class="col-sm-6 col-md-4 col-lg-4 mb-md-50 wow fadeIn" data-wow-delay="0.1s" data-wow-duration="2s">
+                      <div class="post-prev-img">
+                        <img src="images/clinic/Biorevitalization.jpg" alt="Rejuvenecimiento de la piel con biorrevitalización" />
+                      </div>
+                      <div class="post-prev-title font-alt">Biorrevitalización</div>
+                      <div class="post-prev-text">La biorrevitalización con ácido hialurónico es un tratamiento no invasivo que utiliza soluciones a base de ácido hialurónico para hidratar la piel, aumentar su luminosidad y estimular la síntesis de colágeno. Ofrece mejoras sutiles al restablecer la hidratación natural de la piel y revitalizar su aspecto general. Además de mejorar la calidad y la elasticidad de la piel, puede contribuir a retrasar la aparición de nuevos signos de envejecimiento.</div>
+                    </div>
+                    <!-- End Post Item -->
+                    <!-- Post Item -->
+                    <div class="col-sm-6 col-md-4 col-lg-4 mb-md-50 wow fadeIn" data-wow-delay="0.2s" data-wow-duration="2s">
+                      <div class="post-prev-img">
+                        <img src="images/clinic/VampireFacelift.jpg" alt="Rejuvenecimiento facial con el método PRF (Vampire Facelift)" />
+                      </div>
+                      <div class="post-prev-title font-alt">Vampire Facelift - Método PRF</div>
+                      <div class="post-prev-text">El Vampire Facelift, también conocido como método PRF (fibrina rica en plaquetas), es un tratamiento sin cirugía que aprovecha la capacidad regenerativa de la propia sangre del paciente para estimular la producción de colágeno y mejorar la textura de la piel. Se extrae una pequeña cantidad de sangre, se aísla la PRF y se inyecta con cuidado en las zonas del rostro que se van a tratar. El objetivo es un rejuvenecimiento de aspecto natural y una mejor calidad de la piel a partir de la capacidad de regeneración del propio organismo.</div>
+                    </div>
+                    <!-- End Post Item -->
+                  </div>
+
+            </div>
+        </section>
+            <!-- End Services Section -->
+
+
+            <!-- FAQ Section -->
+            <section class="page-section" id="faq">
+                <div class="container relative">
+                    <h2 class="section-title font-alt mb-70 mb-sm-40">
+                        Preguntas frecuentes
+                    </h2>
+
+                    <!-- Expression lines FAQ -->
+                    <div class="row mb-60">
+                        <div class="col-md-10 col-md-offset-1">
+                            <h3 class="font-alt mb-30">Arrugas de expresión</h3>
+
+                            <div class="faq-item mb-40">
+                                <h4 class="font-alt mb-10">¿Quién puede recibir el tratamiento de arrugas de expresión?</h4>
+                                <p>El tratamiento está indicado para adultos a partir de 18 años que desean reducir las arrugas dinámicas causadas por la expresión facial, en particular las líneas de la frente, las patas de gallo y las arrugas del entrecejo. Durante la consulta en Beauty Clinic Mallorca, el Dr. Koerge revisará su historial médico y hablará con usted sobre sus objetivos estéticos para determinar si el tratamiento es adecuado para usted. Puede no estar recomendado durante el embarazo o la lactancia, ni en personas con determinadas enfermedades neurológicas.</p>
+                            </div>
+
+                            <div class="faq-item mb-40">
+                                <h4 class="font-alt mb-10">¿Cuánto duran los resultados del tratamiento de arrugas de expresión?</h4>
+                                <p>Los resultados suelen durar entre 3 y 6 meses, según factores individuales como el metabolismo, la actividad muscular y la zona tratada. A medida que el efecto desaparece de forma gradual, la actividad muscular vuelve y las arrugas pueden reaparecer. Los tratamientos de mantenimiento periódicos pueden ayudar a conservar el aspecto deseado. El Dr. Koerge le recomendará un calendario de tratamiento adecuado en las citas de seguimiento.</p>
+                            </div>
+
+                            <div class="faq-item mb-40">
+                                <h4 class="font-alt mb-10">¿Qué cuidados se recomiendan después del tratamiento de arrugas de expresión?</h4>
+                                <p>Después del tratamiento, evite frotar o masajear las zonas tratadas durante al menos 24 horas. Evite el ejercicio intenso, tumbarse en posición horizontal o inclinarse hacia delante durante las 4 horas siguientes. Puede aparecer un ligero enrojecimiento, hinchazón o pequeños hematomas en los puntos de inyección, que suelen desaparecer en unas horas o días. La mayoría de los pacientes puede retomar sus actividades habituales de inmediato. El resultado completo es visible en un plazo de 7 a 14 días.</p>
+                            </div>
+
+                            <div class="faq-item mb-40">
+                                <h4 class="font-alt mb-10">¿Qué riesgos y efectos secundarios tiene el tratamiento de arrugas de expresión?</h4>
+                                <p>Los efectos secundarios más frecuentes son hematomas, hinchazón o molestias leves y temporales en los puntos de inyección. Con poca frecuencia pueden aparecer dolor de cabeza, síntomas similares a los de la gripe o una caída temporal del párpado. El Dr. Koerge le explicará todos los posibles riesgos durante la consulta y adaptará el tratamiento a sus necesidades individuales.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dermal Fillers FAQ -->
+                    <div class="row mb-60">
+                        <div class="col-md-10 col-md-offset-1">
+                            <h3 class="font-alt mb-30">Rellenos de ácido hialurónico</h3>
+
+                            <div class="faq-item mb-40">
+                                <h4 class="font-alt mb-10">¿Quién es buen candidato para los rellenos de ácido hialurónico?</h4>
+                                <p>Los rellenos están indicados para adultos que desean restaurar el volumen facial, suavizar arrugas o realzar contornos faciales como los labios y los pómulos. Son adecuados para personas con signos de envejecimiento leves o moderados que prefieren un rejuvenecimiento sin cirugía. En Beauty Clinic Mallorca, el Dr. Koerge valora el estado de su piel, su historial médico y sus objetivos estéticos para recomendarle el relleno de ácido hialurónico más adecuado. Los rellenos pueden no ser adecuados durante el embarazo o la lactancia, ni en caso de infecciones cutáneas activas.</p>
+                            </div>
+
+                            <div class="faq-item mb-40">
+                                <h4 class="font-alt mb-10">¿Cuánto duran los resultados de los rellenos?</h4>
+                                <p>La duración depende del tipo de producto, de la zona tratada y del metabolismo de cada persona. Los resultados suelen durar entre 6 y 18 meses. El ácido hialurónico se degrada de forma natural y gradual con el tiempo. Los tratamientos de mantenimiento pueden ayudar a conservar el resultado. El Dr. Koerge le orientará de forma personalizada sobre los intervalos de tratamiento adecuados según sus necesidades y el relleno utilizado.</p>
+                            </div>
+
+                            <div class="faq-item mb-40">
+                                <h4 class="font-alt mb-10">¿Qué cuidados se necesitan después de un tratamiento con rellenos?</h4>
+                                <p>Después del tratamiento, evite tocar o presionar las zonas tratadas durante al menos 6 horas. Evite el ejercicio intenso, el alcohol y la exposición a calor excesivo (sauna, rayos UVA) durante 24 a 48 horas. Puede aparecer una ligera hinchazón, enrojecimiento o hematomas, que suelen remitir en unos días. Aplicar frío puede ayudar a reducir la hinchazón. Duerma con la cabeza elevada la primera noche. El resultado mejora a medida que desaparece la hinchazón inicial, y el aspecto final es visible en unas 2 semanas.</p>
+                            </div>
+
+                            <div class="faq-item mb-40">
+                                <h4 class="font-alt mb-10">¿Qué riesgos tienen los rellenos de ácido hialurónico?</h4>
+                                <p>Los efectos secundarios más frecuentes son hinchazón, hematomas, enrojecimiento y sensibilidad temporales en los puntos de inyección. Con menor frecuencia pueden aparecer bultos, asimetrías o reacciones alérgicas. Las complicaciones graves, como la oclusión vascular, son raras, pero requieren atención médica inmediata. El Dr. Koerge sigue protocolos estrictos para reducir los riesgos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mesotherapy FAQ -->
+                    <div class="row mb-60">
+                        <div class="col-md-10 col-md-offset-1">
+                            <h3 class="font-alt mb-30">Mesoterapia</h3>
+
+                            <div class="faq-item mb-40">
+                                <h4 class="font-alt mb-10">¿Quién puede beneficiarse de la mesoterapia?</h4>
+                                <p>La mesoterapia está indicada para adultos que desean mejorar la calidad, la hidratación y la textura de la piel del rostro, el cuello y el escote. Es especialmente adecuada para quienes presentan los primeros signos de envejecimiento, líneas finas, falta de luminosidad o daños cutáneos causados por el entorno. El Dr. Koerge valorará su tipo de piel y sus inquietudes durante la consulta para determinar si la mesoterapia es adecuada para usted. Puede no estar recomendada durante el embarazo o la lactancia, ni en personas con afecciones o infecciones cutáneas activas.</p>
+                            </div>
+
+                            <div class="faq-item mb-40">
+                                <h4 class="font-alt mb-10">¿Cuánto duran los resultados de la mesoterapia?</h4>
+                                <p>Los resultados varían según el estado de la piel, los hábitos de vida y el protocolo de tratamiento. Las primeras mejoras en la luminosidad y la hidratación pueden apreciarse en pocos días. Para obtener resultados óptimos suele ser necesario un ciclo de 3 a 6 sesiones, con un intervalo de 2 a 4 semanas entre ellas. Los resultados pueden durar varios meses; se recomiendan tratamientos de mantenimiento cada 3 a 6 meses para mantener el rejuvenecimiento de la piel y protegerla frente a los daños ambientales.</p>
+                            </div>
+
+                            <div class="faq-item mb-40">
+                                <h4 class="font-alt mb-10">¿Qué cuidados se necesitan después de la mesoterapia?</h4>
+                                <p>Después de la mesoterapia, evite tocar o lavar la zona tratada durante al menos 6 horas. No aplique maquillaje ni productos cosméticos agresivos y evite la exposición directa al sol o a fuentes de calor durante 24 horas. Un ligero enrojecimiento, hinchazón o pequeñas marcas de inyección son normales y suelen desaparecer en 24 a 48 horas. Evite el ejercicio intenso y el alcohol durante las 24 horas siguientes. Aplique a diario un protector solar de amplio espectro para proteger su piel y favorecer el resultado del tratamiento.</p>
+                            </div>
+
+                            <div class="faq-item mb-40">
+                                <h4 class="font-alt mb-10">¿Tiene riesgos la mesoterapia?</h4>
+                                <p>Los efectos secundarios más frecuentes son enrojecimiento, hinchazón, hematomas o ligeras molestias temporales en los puntos de inyección. En raras ocasiones pueden producirse infecciones, reacciones alérgicas o alteraciones de la pigmentación de la piel. El Dr. Koerge utiliza productos de calidad y sigue estrictas normas de higiene para reducir los riesgos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- End FAQ Section -->
+
+
+            <!-- Call Action Section -->
+            <section class="page-section pt-0 pb-0 banner-section bg-dark-alfa-30" data-background="images/clinic/cover-background-dentaface.jpg">
+                <div class="container relative">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mt-140 mt-lg-80 mb-140 mb-lg-80">
+                                <div class="banner-content">
+                                    <h3 class="banner-heading font-alt">Solicite su consulta</h3>
+                                    <div class="banner-decription">
+                                        Dé un paso informado para cuidar su aspecto. Solicite una consulta con Beauty Clinic Mallorca.
+                                    </div>
+                                    <div class="local-scroll">
+                                        <a href="#contact" class="btn btn-mod btn-w btn-medium btn-round">Contacto</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- End Call Action Section -->
+
+
+
+            <!-- Features Section -->
+            <section class="page-section">
+                <div class="container relative">
+                <h2 class="section-title font-alt mb-70 mb-sm-40">
+                    Por qué elegirnos
+                </h2>
+
+                <!-- Features Grid -->
+                <div class="row multi-columns-row alt-features-grid">
+
+                    <!-- Features Item -->
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <div class="alt-features-item align-center">
+                            <div class="alt-features-icon">
+                                <span class="icon-genius"></span>
+                            </div>
+                            <h3 class="alt-features-title font-alt">Servicio profesional</h3>
+                            <div class="alt-features-descr align-left">
+                                Nuestro equipo se dedica a ofrecerle tratamientos estéticos actuales, adaptados a sus objetivos personales.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Features Item -->
+
+                    <!-- Features Item -->
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <div class="alt-features-item align-center">
+                            <div class="alt-features-icon">
+                                <span class="icon-shield"></span>
+                            </div>
+                            <h3 class="alt-features-title font-alt">Productos seleccionados</h3>
+                            <div class="alt-features-descr align-left">
+                                Trabajamos con productos de fabricantes reconocidos, seleccionados por el Dr. Koerge para cada tratamiento.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Features Item -->
+
+                    <!-- Features Item -->
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <div class="alt-features-item align-center">
+                            <div class="alt-features-icon">
+                                <span class="icon-lightbulb"></span>
+                            </div>
+                            <h3 class="alt-features-title font-alt">Experiencia profesional</h3>
+                            <div class="alt-features-descr align-left">
+                                Nuestro médico responsable, el Dr. Koerge, amplía continuamente su formación, sus certificaciones y su práctica para ofrecerle tratamientos precisos y actualizados.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Features Item -->
+                </div>
+                <!-- End Features Grid -->
+            </div>
+            </section>
+            <!-- End Features Section -->
+
+
+
+            <!-- Contact Section -->
+            <section class="page-section" id="contact">
+                <div class="container relative">
+                  <h2 class="section-title font-alt mb-70 mb-sm-40">
+                    Contacto
+                  </h2>
+                  <div class="row mb-60 mb-xs-40">
+                    <div class="mb-40">
+                      <div class="row">
+                        <!-- Opening Hours -->
+                        <div class="col-md-3 col-lg-3 mb-md-10">
+                          <div class="contact-item">
+                            <div class="ci-icon">
+                              <i class="fa fa-briefcase"></i>
+                            </div>
+                            <div class="ci-title font-alt">
+                              Horario
+                            </div>
+                            <div class="ci-text">
+                              Abrimos de lunes a viernes de 09:30 a 16:00.
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Opening Hours -->
+
+                        <!-- Address -->
+                        <div class="col-md-3 col-lg-3 mb-md-10">
+                          <div class="contact-item">
+                            <div class="ci-icon">
+                              <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div class="ci-title font-alt">
+                              Dirección
+                            </div>
+                            <div class="ci-text">
+                              Calle Arquitecto Francisco Casas 17, Plaza Bendinat Local B10, 07181 Bendinat, Mallorca. <a href="https://www.google.com/maps?cid=2149816206636862685" target="_blank" rel="noopener">Cómo llegar</a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Address -->
+
+                        <!-- Email -->
+                        <div class="col-md-3 col-lg-3 mb-md-10">
+                          <div class="contact-item">
+                            <div class="ci-icon">
+                              <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="ci-title font-alt">
+                              Correo electrónico
+                            </div>
+                            <div class="ci-text">
+                              <a href="mailto:info@beautyclinicmallorca.com">info@beautyclinicmallorca.com</a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Email -->
+
+                        <!-- Phone -->
+                        <div class="col-md-3 col-lg-3 mb-md-10">
+                          <div class="contact-item">
+                            <div class="ci-icon">
+                              <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="ci-title font-alt">
+                              Teléfono
+                            </div>
+                            <div class="ci-text">
+                              Llámenos al <a href="tel:+34971707725">+34 971 707 725</a>.
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Phone -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+                <!-- End Contact Section -->
+
+
+
+            <!-- Google Map -->
+            <div class="google-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98559.96684768848!2d2.468413312903513!3d39.46935211497153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12978fa3e4b46f65%3A0x1dd5ae7320f7ccdd!2sBeauty+Clinic+Mallorca!5e0!3m2!1ses!2ses!4v1559223690001!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <div class="map-section">
+
+                    <div class="map-toggle">
+                        <div class="mt-icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="mt-text font-alt">
+                            <div class="mt-open">Abrir el mapa <i class="fa fa-angle-down"></i></div>
+                            <div class="mt-close">Cerrar el mapa <i class="fa fa-angle-up"></i></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- End Google Map -->
+
+
+            <!-- Foter -->
+            <footer class="page-section bg-gray-lighter footer pb-60">
+                <div class="container">
+                    <!-- Footer Logo -->
+                    <div class="local-scroll mb-30 wow fadeInUp" data-wow-duration="1.2s">
+                        <a href="#top"><img src="images/clinic/dentaface-logo-black.png" width="180" height="36" alt="" /></a>
+                    </div>
+                    <!-- End Footer Logo -->
+
+                    <!-- Footer Text -->
+                    <div class="footer-text">
+                        <!-- Copyright -->
+                        <div class="footer-copy font-alt">
+                            <a>&copy; Beauty Clinic Mallorca <span id="currentYear"></span>. Todos los derechos reservados.</a>
+                        </div>
+                        <!-- End Copyright -->
+                        <div class="footer-copy font-alt"><a>Nº Registro Sanitario 3787 · Dr. Erik Koerge, Nº Colegiado 07001015</a></div>
+                        <div class="footer-made">
+                            <!-- TODO: link to privacidad.html once a Spanish privacy page exists -->
+                            <a href="privacy.html">Privacidad</a>
+                        </div>
+                    </div>
+                    <!-- End Footer Text -->
+                </div>
+
+                <!-- Top Link -->
+                <div class="local-scroll">
+                    <a href="#top" class="link-to-top"><i class="fa fa-caret-up"></i></a>
+                </div>
+                <!-- End Top Link -->
+            </footer>
+
+            <script>
+                document.getElementById("currentYear").textContent = new Date().getFullYear();
+            </script>
+
+            <!-- End Foter -->
+
+
+        </div>
+        <!-- End Page Wrap -->
+
+
+        <!-- JS -->
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/SmoothScroll.js"></script>
+        <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+        <script type="text/javascript" src="js/jquery.localScroll.min.js"></script>
+        <script type="text/javascript" src="js/jquery.viewport.mini.js"></script>
+        <script type="text/javascript" src="js/jquery.countTo.js"></script>
+        <script type="text/javascript" src="js/jquery.appear.js"></script>
+        <script type="text/javascript" src="js/jquery.sticky.js"></script>
+        <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+        <script type="text/javascript" src="js/jquery.fitvids.js"></script>
+        <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript" src="js/wow.min.js"></script>
+        <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/jquery.simple-text-rotator.min.js"></script>
+        <script type="text/javascript" src="js/all.js"></script>
+        <script type="text/javascript" src="js/contact-form.js"></script>
+        <script type="text/javascript" src="js/jquery.ajaxchimp.min.js"></script>
+        <!--[if lt IE 10]><script type="text/javascript" src="js/placeholder.js"></script><![endif]-->
+
+    </body>
+</html>
