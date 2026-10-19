@@ -2,7 +2,7 @@ name: Claude Code
 
 # @claude on issues/PRs -> Claude Code run billed to Laurent's Claude subscription
 # (CLAUDE_CODE_OAUTH_TOKEN from `claude setup-token`). Only LaKo13 can trigger it.
-# Model: sonnet by default; add [opus] or [haiku] to the request to switch.
+# Model: sonnet by default; add [opus], [haiku] or [fable] to the request to switch.
 
 on:
   issue_comment:
@@ -77,8 +77,9 @@ jobs:
           if [ -f pyproject.toml ]; then pip install -e ".[dev]" || pip install -e .; fi
           pip install pytest ruff
 
-      # Model per request: default sonnet; "[opus]" or "[haiku]" in the triggering
-      # comment / review / issue picks that model ([opus] wins if both appear).
+      # Model per request: default sonnet; "[fable]", "[opus]" or "[haiku]" in the
+      # triggering comment / review / issue picks that model. If several appear,
+      # [fable] wins, then [opus], then [haiku]. "fable" is Claude Code's alias for Fable 5.1.
       # Text is passed via env, never interpolated into the script.
       - name: Pick model
         id: model
@@ -97,6 +98,7 @@ jobs:
           esac
           model=sonnet
           case "$text" in
+            *"[fable]"*) model=fable ;;
             *"[opus]"*) model=opus ;;
             *"[haiku]"*) model=haiku ;;
           esac
