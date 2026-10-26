@@ -27,10 +27,11 @@
               var section = target.closest('[id]');
               var location = section ? section.id : 'unknown';
               var lang = document.documentElement.lang || 'unknown';
-              posthog.capture('contact_click', { type: type, location: location, lang: lang });
+              posthog.capture('contact_click', { type: type, location: location, lang: lang, channel: type });
             }
           });
         </script>
+        <script src="js/conversion-tracking.js"></script>
 
         <title>Privacy Policy – Beauty Clinic Mallorca</title>
         <meta name="description" content="Privacy policy of Beauty Clinic Mallorca in Bendinat, Mallorca: what personal data is processed on this website, legal bases and your rights under the GDPR.">

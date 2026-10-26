@@ -27,10 +27,11 @@
               var section = target.closest('[id]');
               var location = section ? section.id : 'unknown';
               var lang = document.documentElement.lang || 'unknown';
-              posthog.capture('contact_click', { type: type, location: location, lang: lang });
+              posthog.capture('contact_click', { type: type, location: location, lang: lang, channel: type });
             }
           });
         </script>
+        <script src="js/conversion-tracking.js"></script>
 
         <title>Skin Biorevitalization in Mallorca | Beauty Clinic Mallorca</title>
         <meta name="description" content="Hyaluronic-acid skin biorevitalization for hydration and skin quality, with a personal consultation with Dr. Erik Koerge. Bendinat, 5 min from Palma. Mon–Fri 09:30–16:00.">

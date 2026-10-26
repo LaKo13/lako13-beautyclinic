@@ -27,10 +27,11 @@
               var section = target.closest('[id]');
               var location = section ? section.id : 'unknown';
               var lang = document.documentElement.lang || 'unknown';
-              posthog.capture('contact_click', { type: type, location: location, lang: lang });
+              posthog.capture('contact_click', { type: type, location: location, lang: lang, channel: type });
             }
           });
         </script>
+        <script src="js/conversion-tracking.js"></script>
 
         <title>Beauty Clinic Mallorca – Botox, Juvederm Treatment</title>
         <meta name="description" content="Aesthetic treatments in Bendinat, Mallorca: Botox, Juvederm fillers, mesotherapy with Dr. Erik Koerge. Mon–Fri 09:30–16:00. Call +34 971 707 725.">
@@ -903,7 +904,7 @@
                               Call Us
                             </div>
                             <div class="ci-text">
-                              Contact us by phone at +34 971 707 725.
+                              Contact us by phone at <a href="tel:+34971707725">+34 971 707 725</a>.
                             </div>
                           </div>
                         </div>

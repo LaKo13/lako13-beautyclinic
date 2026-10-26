@@ -27,10 +27,11 @@
               var section = target.closest('[id]');
               var location = section ? section.id : 'unknown';
               var lang = document.documentElement.lang || 'unknown';
-              posthog.capture('contact_click', { type: type, location: location, lang: lang });
+              posthog.capture('contact_click', { type: type, location: location, lang: lang, channel: type });
             }
           });
         </script>
+        <script src="js/conversion-tracking.js"></script>
 
         <title>Medicina estética en Bendinat, Mallorca | Beauty Clinic Mallorca</title>
         <meta name="description" content="Tratamientos de medicina estética mínimamente invasivos con el Dr. Erik Koerge en Plaza Bendinat, a 5 min de Palma. Lun–Vie 09:30–16:00. Parking gratuito.">

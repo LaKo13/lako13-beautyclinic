@@ -27,10 +27,11 @@
               var section = target.closest('[id]');
               var location = section ? section.id : 'unknown';
               var lang = document.documentElement.lang || 'unknown';
-              posthog.capture('contact_click', { type: type, location: location, lang: lang });
+              posthog.capture('contact_click', { type: type, location: location, lang: lang, channel: type });
             }
           });
         </script>
+        <script src="js/conversion-tracking.js"></script>
 
         <title>Hyaluron-Behandlung auf Mallorca | Dr. Erik Koerge, Bendinat</title>
         <meta name="description" content="Faltenunterspritzung und Volumenaufbau mit Hyaluronsäure in Bendinat bei Palma. Persönliche Beratung durch Dr. Erik Koerge auf Deutsch. Mo–Fr 09:30–16:00.">
