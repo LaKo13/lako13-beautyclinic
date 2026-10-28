@@ -27,10 +27,11 @@
               var section = target.closest('[id]');
               var location = section ? section.id : 'unknown';
               var lang = document.documentElement.lang || 'unknown';
-              posthog.capture('contact_click', { type: type, location: location, lang: lang });
+              posthog.capture('contact_click', { type: type, location: location, lang: lang, channel: type });
             }
           });
         </script>
+        <script src="js/conversion-tracking.js"></script>
 
         <title>Arrugas de expresión en Palma | Beauty Clinic Mallorca</title>
         <meta name="description" content="Información sobre el tratamiento médico de las arrugas de expresión (frente, entrecejo, patas de gallo) en Plaza Bendinat, con valoración previa del Dr. Erik Koerge.">
