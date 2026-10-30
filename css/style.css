@@ -4035,18 +4035,32 @@ a.logo:hover{
 	background-color: #111 !important;
     z-index: 1;
 }
-/* Click-to-load placeholder, shown until External media consent */
+/* Click-to-load placeholder, shown until External media consent.
+   Hidden behind the closed .map-section overlay; it appears in the
+   opened map area, above the 25px "Close the map" strip. */
 .map-consent{
     position: absolute;
     top: 0;
+    right: 0;
+    bottom: 25px;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+    z-index: 3;
     padding: 60px 20px;
     background: #111;
     color: rgba(255,255,255, .75);
     text-align: center;
+    visibility: hidden;
+    opacity: 0;
+
+    -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+}
+.map-section.js-active ~ .map-consent{
+    visibility: visible;
+    opacity: 1;
 }
 .map-consent[hidden]{
     display: none;
@@ -4066,6 +4080,12 @@ a.logo:hover{
 }
 .map-consent-link:hover{
     color: #fff;
+}
+/* The map is 300px high at this width (style-responsive.css) */
+@media only screen and (max-width: 768px) {
+    .map-consent{
+        padding-top: 30px;
+    }
 }
 .gm-style-cc{
 	display: none !important;
