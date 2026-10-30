@@ -21,7 +21,6 @@
             var type = null;
             if (href.startsWith('tel:')) type = 'phone';
             else if (href.startsWith('mailto:')) type = 'email';
-            else if (href.includes('wa.me') || href.includes('whatsapp')) type = 'whatsapp';
             else if (href.includes('google.com/maps') || href.includes('goo.gl/maps')) type = 'directions';
             if (type) {
               var section = target.closest('[id]');
