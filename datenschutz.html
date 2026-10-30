@@ -30,6 +30,7 @@
             }
           });
         </script>
+        <script src="js/consent.js"></script>
         <script src="js/conversion-tracking.js"></script>
 
         <title>Datenschutzerklärung – Beauty Clinic Mallorca</title>
@@ -43,6 +44,7 @@
         <link rel="canonical" href="https://beautyclinicmallorca.com/datenschutz.html">
         <link rel="alternate" hreflang="en" href="https://beautyclinicmallorca.com/privacy.html">
         <link rel="alternate" hreflang="de" href="https://beautyclinicmallorca.com/datenschutz.html">
+        <link rel="alternate" hreflang="es" href="https://beautyclinicmallorca.com/privacidad.html">
         <link rel="alternate" hreflang="x-default" href="https://beautyclinicmallorca.com/privacy.html">
 
         <!-- Favicons -->
@@ -101,6 +103,7 @@
                         <li><a href="index-de.html#services">Dienstleistungen</a></li>
                         <li><a href="index-de.html#contact">Kontakt</a></li>
                         <li><a href="privacy.html"><img src="images/uk-flag.png" alt="Privacy policy in English" width="20" height="20"/></a></li>
+                        <li><a href="privacidad.html"><img src="images/spanish-flag.png" alt="Política de privacidad en español" width="20" height="20"/></a></li>
                     </ul>
                 </div>
             </div>
@@ -115,7 +118,7 @@
                     <div class="col-md-8 col-md-offset-2">
                         <div class="text">
 
-                            <p class="mb-40"><a href="privacy.html">English version</a></p>
+                            <p class="mb-40"><a href="privacy.html">English version</a> · <a href="privacidad.html">Versión en español</a></p>
 
                             <h3 class="font-alt mb-20">1. Verantwortlicher</h3>
                             <p>
@@ -137,23 +140,33 @@
                             <ul>
                                 <li><strong>Google Fonts</strong> (Google Ireland Limited) – Schriftarten, die von Servern von Google geladen werden.</li>
                                 <li><strong>Font Awesome</strong> (Fonticons, Inc., USA) – Symbole, die von use.fontawesome.com geladen werden.</li>
-                                <li><strong>Google Maps</strong> (Google Ireland Limited) – eine eingebettete Karte auf unserer Startseite, die unseren Standort zeigt. Google kann beim Laden der Karte Cookies setzen.</li>
                             </ul>
                             <p>Einige dieser Anbieter können Daten in den USA verarbeiten. Solche Übermittlungen stützen sich auf die in der DSGVO vorgesehenen Garantien, etwa das EU-US Data Privacy Framework oder Standardvertragsklauseln.</p>
+                            <p>Die Google-Maps-Karte auf unserer Startseite wird nur mit Ihrer Einwilligung geladen (siehe Abschnitt 5).</p>
 
-                            <h3 class="font-alt mb-20 mt-40">5. Nutzungsstatistik (PostHog)</h3>
-                            <p>Wir nutzen PostHog, um anonyme Nutzungsstatistiken zu erheben, etwa welche Seiten aufgerufen werden, und so unsere Website zu verbessern. Die Daten werden auf Servern von PostHog in der EU verarbeitet. PostHog ist ohne Cookies oder sonstige Speicherung auf Ihrem Gerät, ohne Sitzungsaufzeichnungen und ohne Erstellung von Nutzerprofilen eingerichtet.</p>
-
-                            <h3 class="font-alt mb-20 mt-40">6. Rechtsgrundlagen</h3>
+                            <h3 class="font-alt mb-20 mt-40" id="cookies">5. Cookies und Einwilligung</h3>
+                            <p>Cookies und ähnliche Technologien, die nicht unbedingt erforderlich sind, setzen wir nur ein, wenn Sie in unserem Cookie-Banner eingewilligt haben (Art. 6 Abs. 1 lit. a DSGVO und Art. 22 Abs. 2 des spanischen Gesetzes 34/2002 über Dienste der Informationsgesellschaft, LSSI). Sie können Ihre Einwilligung jederzeit über „Cookie-Einstellungen“ unten auf jeder Seite ändern oder widerrufen. Der Widerruf berührt nicht die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung.</p>
                             <ul>
-                                <li>Art. 6 Abs. 1 lit. b DSGVO – Bearbeitung Ihrer Anfragen und Vereinbarung von Beratungen oder Behandlungen.</li>
-                                <li>Art. 6 Abs. 1 lit. f DSGVO – unser berechtigtes Interesse an einer sicheren, funktionsfähigen und ansprechend dargestellten Website, der Anzeige unseres Standorts und dem Verständnis, wie die Website genutzt wird.</li>
+                                <li><strong>Notwendig – Ihre Cookie-Auswahl.</strong> Der Schlüssel <code>bcm_consent</code> im lokalen Speicher Ihres Browsers speichert Ihre Auswahl (Version, Datum und die erlaubten Kategorien). Er wird weder an uns noch an Dritte übermittelt. Nach 12 Monaten fragen wir erneut.</li>
+                                <li><strong>Marketing / Messung – Google-Ads-Conversion-Tracking</strong> (Google Ireland Limited; Tag AW-18364793342). Mit Ihrer Einwilligung messen wir, ob Besuche über unsere Google-Anzeigen zu einem Anruf, einer E-Mail oder einer Anfrage führen. Google setzt dann Cookies wie <code>_gcl_au</code>, die bis zu 90 Tage gespeichert werden. Google kann Daten in den USA verarbeiten; solche Übermittlungen stützen sich auf die in der DSGVO vorgesehenen Garantien, etwa das EU-US Data Privacy Framework oder Standardvertragsklauseln. Ohne Ihre Einwilligung werden keine Google-Ads-Cookies gesetzt; das Google-Tag wird dennoch geladen und kann cookielose Signale ohne Kennungen an Google senden (Google Consent Mode).</li>
+                                <li><strong>Externe Medien – Google Maps</strong> (Google Ireland Limited). Die Karte auf unserer Startseite wird erst geladen, wenn Sie auf „Karte laden“ klicken oder Externe Medien in den Cookie-Einstellungen erlauben. Google erhält dann Ihre IP-Adresse und technische Browserdaten und kann Cookies setzen. Ohne Einwilligung können Sie stattdessen den Link „In Google Maps öffnen“ nutzen.</li>
+                                <li><strong>Nutzungsstatistik – PostHog</strong> (Server in der EU). Ohne Cookies und ohne Speicherung auf Ihrem Gerät, siehe Abschnitt 6.</li>
                             </ul>
 
-                            <h3 class="font-alt mb-20 mt-40">7. Ihre Rechte</h3>
-                            <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten, das Recht, einer auf unser berechtigtes Interesse gestützten Verarbeitung zu widersprechen, sowie das Recht auf Datenübertragbarkeit. Außerdem haben Sie das Recht, sich bei einer Aufsichtsbehörde zu beschweren, in Spanien bei der Agencia Española de Protección de Datos (AEPD, <a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>).</p>
+                            <h3 class="font-alt mb-20 mt-40">6. Nutzungsstatistik (PostHog)</h3>
+                            <p>Wir nutzen PostHog, um anonyme Nutzungsstatistiken zu erheben, etwa welche Seiten aufgerufen werden, und so unsere Website zu verbessern. Die Daten werden auf Servern von PostHog in der EU verarbeitet. PostHog ist ohne Cookies oder sonstige Speicherung auf Ihrem Gerät, ohne Sitzungsaufzeichnungen und ohne Erstellung von Nutzerprofilen eingerichtet.</p>
 
-                            <h3 class="font-alt mb-20 mt-40">8. Datenschutzanfragen</h3>
+                            <h3 class="font-alt mb-20 mt-40">7. Rechtsgrundlagen</h3>
+                            <ul>
+                                <li>Art. 6 Abs. 1 lit. a DSGVO – Ihre Einwilligung, für das Google-Ads-Conversion-Tracking und die Google-Maps-Karte (Abschnitt 5).</li>
+                                <li>Art. 6 Abs. 1 lit. b DSGVO – Bearbeitung Ihrer Anfragen und Vereinbarung von Beratungen oder Behandlungen.</li>
+                                <li>Art. 6 Abs. 1 lit. f DSGVO – unser berechtigtes Interesse an einer sicheren, funktionsfähigen und ansprechend dargestellten Website und dem Verständnis, wie die Website genutzt wird.</li>
+                            </ul>
+
+                            <h3 class="font-alt mb-20 mt-40">8. Ihre Rechte</h3>
+                            <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten, das Recht, einer auf unser berechtigtes Interesse gestützten Verarbeitung zu widersprechen, sowie das Recht auf Datenübertragbarkeit. Eine Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen. Außerdem haben Sie das Recht, sich bei einer Aufsichtsbehörde zu beschweren, in Spanien bei der Agencia Española de Protección de Datos (AEPD, <a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>).</p>
+
+                            <h3 class="font-alt mb-20 mt-40">9. Datenschutzanfragen</h3>
                             <p>Um Ihre Rechte auszuüben oder bei Fragen zum Datenschutz schreiben Sie uns bitte an <a href="mailto:info@beautyclinicmallorca.com">info@beautyclinicmallorca.com</a>.</p>
 
                             <p class="mt-40"><em>Stand: Oktober 2026</em></p>
@@ -183,7 +196,7 @@
                         </div>
                         <!-- End Copyright -->
                         <div class="footer-made">
-                            <a href="datenschutz.html">Datenschutz</a>
+                            <a href="datenschutz.html">Datenschutz</a> · <a href="datenschutz.html#cookies" data-consent-open>Cookie-Einstellungen</a>
                         </div>
                     </div>
                     <!-- End Footer Text -->

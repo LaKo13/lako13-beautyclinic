@@ -53,6 +53,7 @@
     <loc>https://beautyclinicmallorca.com/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://beautyclinicmallorca.com/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://beautyclinicmallorca.com/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://beautyclinicmallorca.com/privacidad.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://beautyclinicmallorca.com/privacy.html"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -61,6 +62,16 @@
     <loc>https://beautyclinicmallorca.com/datenschutz.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://beautyclinicmallorca.com/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://beautyclinicmallorca.com/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://beautyclinicmallorca.com/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://beautyclinicmallorca.com/privacy.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://beautyclinicmallorca.com/privacidad.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beautyclinicmallorca.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beautyclinicmallorca.com/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://beautyclinicmallorca.com/privacidad.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://beautyclinicmallorca.com/privacy.html"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

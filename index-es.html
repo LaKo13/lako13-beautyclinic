@@ -30,6 +30,7 @@
             }
           });
         </script>
+        <script src="js/consent.js"></script>
         <script src="js/conversion-tracking.js"></script>
 
         <title>Medicina estética en Bendinat, Mallorca | Beauty Clinic Mallorca</title>
@@ -748,7 +749,13 @@
 
             <!-- Google Map -->
             <div class="google-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98559.96684768848!2d2.468413312903513!3d39.46935211497153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12978fa3e4b46f65%3A0x1dd5ae7320f7ccdd!2sBeauty+Clinic+Mallorca!5e0!3m2!1ses!2ses!4v1559223690001!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <!-- Loaded by js/consent.js only after External media consent -->
+                <iframe data-consent-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98559.96684768848!2d2.468413312903513!3d39.46935211497153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12978fa3e4b46f65%3A0x1dd5ae7320f7ccdd!2sBeauty+Clinic+Mallorca!5e0!3m2!1ses!2ses!4v1559223690001!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0" allowfullscreen title="Google Maps"></iframe>
+                <div class="map-consent" data-consent-placeholder>
+                    <p class="map-consent-text">Este mapa lo proporciona Google Maps. Al cargarlo se envían a Google datos como su dirección IP.</p>
+                    <button type="button" class="btn btn-mod btn-small" data-consent-load-media>Cargar mapa</button>
+                    <a href="https://www.google.com/maps?cid=2149816206636862685" target="_blank" rel="noopener" class="map-consent-link">Abrir en Google Maps</a>
+                </div>
                 <div class="map-section">
 
                     <div class="map-toggle">
@@ -785,8 +792,7 @@
                         <!-- End Copyright -->
                         <div class="footer-copy font-alt"><a>Nº Registro Sanitario 3787 · Dr. Erik Koerge, Nº Colegiado 07001015</a></div>
                         <div class="footer-made">
-                            <!-- TODO: link to privacidad.html once a Spanish privacy page exists -->
-                            <a href="privacy.html">Privacidad</a>
+                            <a href="privacidad.html">Privacidad</a> · <a href="privacidad.html#cookies" data-consent-open>Configuración de cookies</a>
                         </div>
                     </div>
                     <!-- End Footer Text -->
