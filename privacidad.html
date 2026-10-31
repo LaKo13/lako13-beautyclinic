@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- PostHog Analytics -->
+        <script>
+          !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+          posthog.init('phc_tHp7NezNwFJNqLXUGS9Qji3jzG8SHZQjVb4GDDnJrR3W', {
+            api_host: 'https://eu.i.posthog.com',
+            person_profiles: 'identified_only',
+            disable_session_recording: true,
+            persistence: 'memory'
+          })
+        </script>
+
+        <!-- Contact Click Tracking -->
+        <script>
+          document.addEventListener('click', function(e) {
+            var target = e.target.closest('a[href]');
+            if (!target) return;
+            var href = target.getAttribute('href');
+            var type = null;
+            if (href.startsWith('tel:')) type = 'phone';
+            else if (href.startsWith('mailto:')) type = 'email';
+            else if (href.includes('google.com/maps') || href.includes('goo.gl/maps')) type = 'directions';
+            if (type) {
+              var section = target.closest('[id]');
+              var location = section ? section.id : 'unknown';
+              var lang = document.documentElement.lang || 'unknown';
+              posthog.capture('contact_click', { type: type, location: location, lang: lang, channel: type });
+            }
+          });
+        </script>
+        <script src="js/consent.js"></script>
+        <script src="js/conversion-tracking.js"></script>
+
+        <title>Política de privacidad – Beauty Clinic Mallorca</title>
+        <meta name="description" content="Política de privacidad de Beauty Clinic Mallorca en Bendinat, Mallorca: qué datos personales se tratan en este sitio web, bases jurídicas y sus derechos según el RGPD.">
+        <meta charset="utf-8">
+        <meta name="author" content="Beauty Clinic Mallorca">
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+        <!-- Canonical & hreflang -->
+        <link rel="canonical" href="https://beautyclinicmallorca.com/privacidad.html">
+        <link rel="alternate" hreflang="en" href="https://beautyclinicmallorca.com/privacy.html">
+        <link rel="alternate" hreflang="de" href="https://beautyclinicmallorca.com/datenschutz.html">
+        <link rel="alternate" hreflang="es" href="https://beautyclinicmallorca.com/privacidad.html">
+        <link rel="alternate" hreflang="x-default" href="https://beautyclinicmallorca.com/privacy.html">
+
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="images/favicon.png">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style-responsive.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/vertical-rhythm.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    </head>
+    <body class="appear-animate">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="loader">Loading...</div>
+        </div>
+        <!-- End Page Loader -->
+
+        <!-- Page Wrap -->
+        <div class="page" id="top">
+
+        <!-- Title Section -->
+        <section class="page-section bg-dark-alfa-30 bg-scroll" data-background="images/clinic/Dentaface_Cover.jpg" id="home">
+            <div class="relative container align-left">
+                <h1 class="hs-line-11 font-alt mb-0 mt-xs-20">
+                    Política de privacidad
+                </h1>
+            </div>
+        </section>
+        <!-- End Title Section -->
+
+
+        <!-- Navigation panel -->
+        <nav class="main-nav dark transparent stick-fixed">
+            <div class="full-wrapper relative clearfix">
+                <!-- Logo ( * your text or image into link tag *) -->
+                <div class="nav-logo-wrap local-scroll">
+                    <a href="index-es.html" class="logo" title="Beauty Clinic Mallorca - Medicina estética en Bendinat">
+                        <img src="images/clinic/dentaface-logo-white1.png" alt="Logotipo de Beauty Clinic Mallorca" />
+                    </a>
+                </div>
+                <div class="mobile-nav">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <!-- Main Menu -->
+                <div class="inner-nav desktop-nav">
+                    <ul class="clearlist scroll-nav local-scroll">
+                        <li><a href="index-es.html#home">Inicio</a></li>
+                        <li><a href="index-es.html#about">Sobre nosotros</a></li>
+                        <li><a href="index-es.html#services">Tratamientos</a></li>
+                        <li><a href="index-es.html#contact">Contacto</a></li>
+                        <li><a href="privacy.html"><img src="images/uk-flag.png" alt="Privacy policy in English" width="20" height="20"/></a></li>
+                        <li><a href="datenschutz.html"><img src="images/german-flag.png" alt="Datenschutzerklärung auf Deutsch" width="20" height="20"/></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navigation panel -->
+
+
+        <!-- Privacy Section -->
+        <section class="page-section" id="privacy">
+            <div class="container relative">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="text">
+
+                            <p class="mb-40"><a href="privacy.html">English version</a> · <a href="datenschutz.html">Deutsche Version</a></p>
+
+                            <h3 class="font-alt mb-20">1. Responsable del tratamiento</h3>
+                            <p>
+                                Beauty Clinic Mallorca<br>
+                                Calle Arquitecto Francisco Casas 17, Plaza Bendinat Local B10<br>
+                                07181 Bendinat, Mallorca, España<br>
+                                Teléfono: +34 871 078 034<br>
+                                Correo electrónico: <a href="mailto:info@beautyclinicmallorca.com">info@beautyclinicmallorca.com</a>
+                            </p>
+
+                            <h3 class="font-alt mb-20 mt-40">2. Contacto por teléfono o correo electrónico</h3>
+                            <p>Si nos llama o nos envía un correo electrónico, tratamos los datos que nos facilita (por ejemplo, su nombre, número de teléfono, dirección de correo electrónico y el contenido de su mensaje) para responder a su consulta y, en su caso, concertar una consulta o un tratamiento. Conservamos estos datos solo durante el tiempo necesario para esa finalidad o el exigido por la ley.</p>
+
+                            <h3 class="font-alt mb-20 mt-40">3. Alojamiento y registros del servidor</h3>
+                            <p>Este sitio web está alojado en GitHub Pages (GitHub, Inc., EE. UU.). Cuando visita el sitio, el proveedor de alojamiento trata automáticamente datos técnicos en los registros del servidor, como su dirección IP, la fecha y hora del acceso, la página solicitada, la página de referencia y el tipo de navegador. Esto es necesario para ofrecer el sitio web y mantenerlo seguro.</p>
+
+                            <h3 class="font-alt mb-20 mt-40">4. Contenido de terceros</h3>
+                            <p>Para mostrar este sitio web, su navegador se conecta a los siguientes proveedores, que reciben su dirección IP y datos técnicos del navegador:</p>
+                            <ul>
+                                <li><strong>Google Fonts</strong> (Google Ireland Limited): fuentes web cargadas desde los servidores de Google.</li>
+                                <li><strong>Font Awesome</strong> (Fonticons, Inc., EE. UU.): iconos cargados desde use.fontawesome.com.</li>
+                            </ul>
+                            <p>Algunos de estos proveedores pueden tratar datos en EE. UU. Dichas transferencias se basan en las garantías previstas en el RGPD, como el Marco de Privacidad de Datos UE-EE. UU. o las cláusulas contractuales tipo.</p>
+                            <p>El mapa de Google Maps de nuestra página de inicio solo se carga con su consentimiento (véase el apartado 5).</p>
+
+                            <h3 class="font-alt mb-20 mt-40" id="cookies">5. Cookies y consentimiento</h3>
+                            <p>Solo utilizamos cookies y tecnologías similares que no sean estrictamente necesarias si usted lo ha consentido en nuestro banner de cookies (art. 6.1.a RGPD y art. 22.2 de la Ley 34/2002, de servicios de la sociedad de la información, LSSI). Puede cambiar o retirar su consentimiento en cualquier momento en «Configuración de cookies», al pie de cada página. La retirada del consentimiento no afecta a la licitud del tratamiento realizado antes de la retirada.</p>
+                            <ul>
+                                <li><strong>Necesarias: su elección de cookies.</strong> La clave <code>bcm_consent</code> en el almacenamiento local de su navegador guarda su elección (versión, fecha y las categorías que ha permitido). No se envía ni a nosotros ni a terceros. Volvemos a preguntarle pasados 12 meses.</li>
+                                <li><strong>Marketing / medición: seguimiento de conversiones de Google Ads</strong> (Google Ireland Limited; etiqueta AW-18364793342). Con su consentimiento, medimos si las visitas desde nuestros anuncios de Google generan una llamada, un correo electrónico o una consulta. Google instala entonces cookies como <code>_gcl_au</code>, que se conservan hasta 90 días. Google puede tratar datos en EE. UU.; dichas transferencias se basan en las garantías previstas en el RGPD, como el Marco de Privacidad de Datos UE-EE. UU. o las cláusulas contractuales tipo. Sin su consentimiento no se instalan cookies de Google Ads; la etiqueta de Google se carga igualmente y puede enviar a Google señales sin cookies y sin identificadores (modo de consentimiento de Google).</li>
+                                <li><strong>Contenido externo: Google Maps</strong> (Google Ireland Limited). El mapa de nuestra página de inicio solo se carga si hace clic en «Cargar mapa» o permite el contenido externo en la configuración de cookies. Google recibe entonces su dirección IP y datos técnicos del navegador y puede instalar cookies. Sin consentimiento, puede usar en su lugar el enlace «Abrir en Google Maps».</li>
+                                <li><strong>Estadísticas de uso: PostHog</strong> (servidores en la UE). Sin cookies y sin almacenamiento en su dispositivo, véase el apartado 6.</li>
+                            </ul>
+
+                            <h3 class="font-alt mb-20 mt-40">6. Estadísticas de uso (PostHog)</h3>
+                            <p>Utilizamos PostHog para recopilar estadísticas de uso anónimas, como qué páginas se visitan, con el fin de mejorar nuestro sitio web. Los datos se tratan en servidores de PostHog en la UE. PostHog está configurado sin cookies ni otro almacenamiento en su dispositivo, sin grabaciones de sesiones y sin crear perfiles de usuario.</p>
+
+                            <h3 class="font-alt mb-20 mt-40">7. Bases jurídicas</h3>
+                            <ul>
+                                <li>Art. 6.1.a RGPD: su consentimiento, para la medición de conversiones de Google Ads y el mapa de Google Maps (apartado 5).</li>
+                                <li>Art. 6.1.b RGPD: la gestión de sus consultas y la concertación de consultas o tratamientos.</li>
+                                <li>Art. 6.1.f RGPD: nuestro interés legítimo en un sitio web seguro, funcional y bien presentado y en comprender cómo se utiliza.</li>
+                            </ul>
+
+                            <h3 class="font-alt mb-20 mt-40">8. Sus derechos</h3>
+                            <p>Tiene derecho de acceso, rectificación, supresión y limitación del tratamiento de sus datos personales, derecho a oponerse al tratamiento basado en nuestro interés legítimo y derecho a la portabilidad de los datos. Cuando el tratamiento se basa en su consentimiento, puede retirarlo en cualquier momento con efectos para el futuro. También tiene derecho a presentar una reclamación ante una autoridad de control, en España la Agencia Española de Protección de Datos (AEPD, <a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>).</p>
+
+                            <h3 class="font-alt mb-20 mt-40">9. Solicitudes de privacidad</h3>
+                            <p>Para ejercer sus derechos o para cualquier pregunta sobre protección de datos, escríbanos a <a href="mailto:info@beautyclinicmallorca.com">info@beautyclinicmallorca.com</a>.</p>
+
+                            <p class="mt-40"><em>Última actualización: octubre de 2026</em></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Privacy Section -->
+
+
+            <!-- Foter -->
+            <footer class="page-section bg-gray-lighter footer pb-60">
+                <div class="container">
+                    <!-- Footer Logo -->
+                    <div class="local-scroll mb-30 wow fadeInUp" data-wow-duration="1.2s">
+                        <a href="#top"><img src="images/clinic/dentaface-logo-black.png" width="180" height="36" alt="" /></a>
+                    </div>
+                    <!-- End Footer Logo -->
+            
+                    <!-- Footer Text -->
+                    <div class="footer-text">
+                        <!-- Copyright -->
+                        <div class="footer-copy font-alt">
+                            <a>&copy; Beauty Clinic Mallorca <span id="currentYear"></span>. Todos los derechos reservados.</a>
+                        </div>
+                        <!-- End Copyright -->
+                        <div class="footer-made">
+                            <a href="privacidad.html">Privacidad</a> · <a href="privacidad.html#cookies" data-consent-open>Configuración de cookies</a>
+                        </div>
+                    </div>
+                    <!-- End Footer Text -->
+                </div>
+            
+                <!-- Top Link -->
+                <div class="local-scroll">
+                    <a href="#top" class="link-to-top"><i class="fa fa-caret-up"></i></a>
+                </div>
+                <!-- End Top Link -->
+            </footer>
+            
+            <script>
+                document.getElementById("currentYear").textContent = new Date().getFullYear();
+            </script>
+            
+            <!-- End Foter -->
+
+
+        </div>
+        <!-- End Page Wrap -->
+
+
+        <!-- JS -->
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/SmoothScroll.js"></script>
+        <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+        <script type="text/javascript" src="js/jquery.localScroll.min.js"></script>
+        <script type="text/javascript" src="js/jquery.viewport.mini.js"></script>
+        <script type="text/javascript" src="js/jquery.countTo.js"></script>
+        <script type="text/javascript" src="js/jquery.appear.js"></script>
+        <script type="text/javascript" src="js/jquery.sticky.js"></script>
+        <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+        <script type="text/javascript" src="js/jquery.fitvids.js"></script>
+        <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript" src="js/wow.min.js"></script>
+        <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/jquery.simple-text-rotator.min.js"></script>
+        <script type="text/javascript" src="js/all.js"></script>
+        <!--[if lt IE 10]><script type="text/javascript" src="js/placeholder.js"></script><![endif]-->
+
+    </body>
+</html>

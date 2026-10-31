@@ -664,6 +664,63 @@ a.btn-mod:focus{
     font-size: 13px;
 }
 
+/* Consent banner */
+.consent-banner{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    padding: 15px 20px;
+    background: rgba(255,255,255, .97);
+    border-top: 1px solid #e5e5e5;
+    -webkit-box-shadow: 0 -2px 10px rgba(0,0,0, .08);
+    box-shadow: 0 -2px 10px rgba(0,0,0, .08);
+    text-align: center;
+}
+.consent-banner-text{
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #555;
+}
+.consent-banner-text a{
+    text-decoration: underline;
+}
+.consent-banner-actions .btn-mod{
+    margin: 0 5px 5px;
+}
+.consent-settings{
+    max-width: 640px;
+    max-height: 50vh;
+    overflow-y: auto;
+    margin: 0 auto 10px;
+    text-align: left;
+}
+.consent-settings[hidden]{
+    display: none;
+}
+.consent-category{
+    padding: 8px 0;
+    border-top: 1px solid #e5e5e5;
+}
+.consent-category-label{
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: #111;
+    cursor: pointer;
+}
+.consent-category-label input{
+    margin: 0 6px 0 0;
+}
+.consent-category-desc{
+    margin: 2px 0 0 19px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #777;
+}
+
 .btn-mod.btn-glass{
     color: rgba(255,255,255, .75);
     background: rgba(0,0,0, .40);
@@ -3977,6 +4034,58 @@ a.logo:hover{
     position: relative;
 	background-color: #111 !important;
     z-index: 1;
+}
+/* Click-to-load placeholder, shown until External media consent.
+   Hidden behind the closed .map-section overlay; it appears in the
+   opened map area, above the 25px "Close the map" strip. */
+.map-consent{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 25px;
+    left: 0;
+    z-index: 3;
+    padding: 60px 20px;
+    background: #111;
+    color: rgba(255,255,255, .75);
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+
+    -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+}
+.map-section.js-active ~ .map-consent{
+    visibility: visible;
+    opacity: 1;
+}
+.map-consent[hidden]{
+    display: none;
+}
+.map-consent-text{
+    max-width: 480px;
+    margin: 0 auto 20px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+.map-consent-link{
+    display: block;
+    margin-top: 15px;
+    font-size: 13px;
+    color: #fff;
+    text-decoration: underline;
+}
+.map-consent-link:hover{
+    color: #fff;
+}
+/* The map is 300px high at this width (style-responsive.css) */
+@media only screen and (max-width: 768px) {
+    .map-consent{
+        padding-top: 30px;
+    }
 }
 .gm-style-cc{
 	display: none !important;

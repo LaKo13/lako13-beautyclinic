@@ -27,6 +27,8 @@ Never mention or link HANSEATICUM.
 
 ## Tracking
 - Keep the PostHog snippet (EU, cookieless, no session recording) and `contact_click` tracking intact on every page.
+- Every page loads `js/consent.js` synchronously in `<head>` before `js/conversion-tracking.js` (Consent Mode v2 defaults denied; Google Ads only after Marketing consent). Keep that order and the footer "Cookie settings" / "Cookie-Einstellungen" / "Configuración de cookies" link (`data-consent-open`) on every page.
+- Third-party embeds (e.g. Google Maps) must stay click-to-load: put the URL in `data-consent-src`, never `src`. List any new cookie or third-party service in the cookie section of privacy.html, datenschutz.html and privacidad.html.
 
 ## Workflow
 - Work via PRs only. Never push to the default branch and never merge.

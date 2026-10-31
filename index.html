@@ -21,7 +21,6 @@
             var type = null;
             if (href.startsWith('tel:')) type = 'phone';
             else if (href.startsWith('mailto:')) type = 'email';
-            else if (href.includes('wa.me') || href.includes('whatsapp')) type = 'whatsapp';
             else if (href.includes('google.com/maps') || href.includes('goo.gl/maps')) type = 'directions';
             if (type) {
               var section = target.closest('[id]');
@@ -31,6 +30,7 @@
             }
           });
         </script>
+        <script src="js/consent.js"></script>
         <script src="js/conversion-tracking.js"></script>
 
         <title>Beauty Clinic Mallorca – Botox, Juvederm Treatment</title>
@@ -931,7 +931,8 @@
 
             <!-- Google Map -->
             <div class="google-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98559.96684768848!2d2.468413312903513!3d39.46935211497153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12978fa3e4b46f65%3A0x1dd5ae7320f7ccdd!2sBeauty+Clinic+Mallorca!5e0!3m2!1sde!2ses!4v1559223690001!5m2!1sde!2ses" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <!-- Loaded by js/consent.js only after External media consent -->
+                <iframe data-consent-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98559.96684768848!2d2.468413312903513!3d39.46935211497153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12978fa3e4b46f65%3A0x1dd5ae7320f7ccdd!2sBeauty+Clinic+Mallorca!5e0!3m2!1sde!2ses!4v1559223690001!5m2!1sde!2ses" width="600" height="450" frameborder="0" style="border:0" allowfullscreen title="Google Maps"></iframe>
                 <div class="map-section">
 
                     <div class="map-toggle">
@@ -944,6 +945,12 @@
                         </div>
                     </div>
 
+                </div>
+                <!-- Shown inside the opened map area until External media consent -->
+                <div class="map-consent" data-consent-placeholder>
+                    <p class="map-consent-text">This map is provided by Google Maps. Loading it sends data such as your IP address to Google.</p>
+                    <button type="button" class="btn btn-mod btn-small" data-consent-load-media>Load map</button>
+                    <a href="https://www.google.com/maps?cid=2149816206636862685" target="_blank" rel="noopener" class="map-consent-link">Open in Google Maps</a>
                 </div>
 
             </div>
@@ -968,7 +975,7 @@
                         <!-- End Copyright -->
                         <div class="footer-copy font-alt"><a>Nº Registro Sanitario 3787 · Dr. Erik Koerge, Nº Colegiado 07001015</a></div>
                         <div class="footer-made">
-                            <a href="privacy.html">Privacy</a>
+                            <a href="privacy.html">Privacy</a> · <a href="privacy.html#cookies" data-consent-open>Cookie settings</a>
                         </div>
                     </div>
                     <!-- End Footer Text -->
