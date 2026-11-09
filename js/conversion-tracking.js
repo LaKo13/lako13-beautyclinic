@@ -27,12 +27,17 @@
   function trackConversion(channel) {
     var label = GADS_LABELS[channel];
     if (label && typeof gtag === 'function') {
-      gtag('event', 'conversion', { send_to: GADS_ID + '/' + label });
+      // Beacon transport so the hit survives immediate navigation (tel:/mailto:).
+      gtag('event', 'conversion', {
+        send_to: GADS_ID + '/' + label,
+        transport_type: 'beacon'
+      });
     }
   }
   window.trackConversion = trackConversion;
 
-  // tel: and mailto: clicks. No preventDefault: gtag sends via beacon.
+  // tel: and mailto: clicks. No preventDefault: trackConversion sets
+  // transport_type 'beacon' so the hit is not cancelled when the page navigates.
   document.addEventListener('click', function (e) {
     var target = e.target.closest('a[href]');
     if (!target) return;
