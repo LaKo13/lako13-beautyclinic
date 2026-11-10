@@ -27,12 +27,16 @@
   function trackConversion(channel) {
     var label = GADS_LABELS[channel];
     if (label && typeof gtag === 'function') {
-      gtag('event', 'conversion', { send_to: GADS_ID + '/' + label });
+      gtag('event', 'conversion', {
+        send_to: GADS_ID + '/' + label,
+        transport_type: 'beacon'
+      });
     }
   }
   window.trackConversion = trackConversion;
 
-  // tel: and mailto: clicks. No preventDefault: gtag sends via beacon.
+  // tel: and mailto: clicks. No preventDefault: trackConversion sets
+  // transport_type 'beacon' so the hit survives the navigation away.
   document.addEventListener('click', function (e) {
     var target = e.target.closest('a[href]');
     if (!target) return;
